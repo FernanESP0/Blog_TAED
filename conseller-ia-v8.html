@@ -247,13 +247,13 @@ body::before{
 .body-text{font-size:1.22rem;color:var(--ink-2);line-height:1.92;margin-bottom:1.6rem}
 .body-text em{font-style:italic}
 /* PHASE 1 FIX · Strong de-bolded in body text — only headings/titles remain bold */
+/* Light-background contexts → de-bold + subtle underline + dark ink (good contrast on light bg) */
 .body-text strong,
 .case-context strong,
 .case-question strong,
 .case-consensus strong,
 .case-ctx strong,
 .case-ctx-box strong,
-.case-ratio strong,
 .philo-deep-text strong,
 .philo-deep-block-text strong,
 .philo-deep-connection strong,
@@ -265,11 +265,29 @@ body::before{
 .dilemma-side-text strong,
 .value-panel-body strong,
 .exec-card p strong,
-.mtw p strong,
-.manifesto p strong,
 .level-body strong,
 .arg-list li strong{font-weight:400;color:var(--ink);text-decoration:underline;text-decoration-color:rgba(27,63,110,.28);text-decoration-thickness:1px;text-underline-offset:3px}
 .body-text b,.case-context b,.case-question b{font-weight:400}
+
+/* PHASE 1 FIX · DARK-BG contexts → de-bold but keep VISIBLE with light accent color
+   (prevents black-on-black inside tooltips, manifesto, case-ratio, etc.)
+   This rule has higher specificity than the generic one above. */
+.tt-box strong,
+.case-ratio strong,
+.manifesto strong,
+.manifesto p strong,
+.mtw strong,
+.mtw p strong,
+.pull-quote strong,
+.philo-deep-quote strong,
+.philo-deep-header strong{
+  font-weight:400;
+  color:#7db8e8;
+  text-decoration:underline;
+  text-decoration-color:rgba(125,184,232,.45);
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+}
 .section-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.55rem;margin-top:3.5rem}
 .sub-heading{font-family:var(--serif);font-size:2.1rem;font-weight:500;color:var(--ink);margin-bottom:1.3rem;line-height:1.2}
 .sub-sub-heading{font-family:var(--sans);font-size:1.15rem;font-weight:500;color:var(--ink);margin:2.25rem 0 1rem;letter-spacing:.01em}
