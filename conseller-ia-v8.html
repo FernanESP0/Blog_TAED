@@ -246,7 +246,30 @@ body::before{
 .intro-block{font-family:var(--serif);font-size:1.6rem;font-weight:400;line-height:1.76;color:var(--ink-2);border-left:3px solid var(--accent);padding-left:2rem;margin-bottom:5rem}
 .body-text{font-size:1.22rem;color:var(--ink-2);line-height:1.92;margin-bottom:1.6rem}
 .body-text em{font-style:italic}
-.body-text strong{font-weight:500;color:var(--ink)}
+/* PHASE 1 FIX · Strong de-bolded in body text — only headings/titles remain bold */
+.body-text strong,
+.case-context strong,
+.case-question strong,
+.case-consensus strong,
+.case-ctx strong,
+.case-ctx-box strong,
+.case-ratio strong,
+.philo-deep-text strong,
+.philo-deep-block-text strong,
+.philo-deep-connection strong,
+.ai-use-text strong,
+.ai-use-foot strong,
+.eco-card-prop strong,
+.eco-foot p strong,
+.alert-body p strong,
+.dilemma-side-text strong,
+.value-panel-body strong,
+.exec-card p strong,
+.mtw p strong,
+.manifesto p strong,
+.level-body strong,
+.arg-list li strong{font-weight:400;color:var(--ink);text-decoration:underline;text-decoration-color:rgba(27,63,110,.28);text-decoration-thickness:1px;text-underline-offset:3px}
+.body-text b,.case-context b,.case-question b{font-weight:400}
 .section-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.55rem;margin-top:3.5rem}
 .sub-heading{font-family:var(--serif);font-size:2.1rem;font-weight:500;color:var(--ink);margin-bottom:1.3rem;line-height:1.2}
 .sub-sub-heading{font-family:var(--sans);font-size:1.15rem;font-weight:500;color:var(--ink);margin:2.25rem 0 1rem;letter-spacing:.01em}
@@ -261,7 +284,9 @@ body::before{
 /* ═══ TOOLTIP ═══ */
 .tt{position:relative;display:inline}
 .tt-trigger{border-bottom:1px dotted var(--accent);cursor:help;color:inherit}
-.tt-box{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--ink);color:#f6f4ef;font-size:.8rem;line-height:1.6;padding:.8rem 1rem;border-radius:3px;width:250px;z-index:50;pointer-events:none;font-family:var(--sans);font-weight:400;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.tt-box{display:none;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);background:var(--ink);color:#f6f4ef;font-size:.82rem;line-height:1.65;padding:.85rem 1.05rem;border-radius:5px;width:280px;z-index:9999;pointer-events:none;font-family:var(--sans);font-weight:400;box-shadow:0 12px 32px rgba(0,0,0,.5),0 0 0 1px rgba(125,184,232,.18);border:1px solid rgba(125,184,232,.15)}
+.tt-box::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:6px solid transparent;border-top-color:var(--ink)}
+.tt:hover{z-index:9999}
 .tt:hover .tt-box{display:block}
 .tt-box .tt-title{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#7db8e8;display:block;margin-bottom:.4rem}
 .cite-link{font-family:var(--mono);font-size:.75rem;vertical-align:super;line-height:0;color:var(--accent);text-decoration:none;cursor:pointer;padding:0 1px}
@@ -324,7 +349,7 @@ body::before{
 .pull-quote cite{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;color:rgba(246,244,239,.38);margin-top:1rem;font-style:normal}
 
 /* ═══ IMPACT LEVELS ═══ */
-.levels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bg-3);border:1px solid var(--bg-3);border-radius:4px;overflow:hidden;margin:2rem 0}
+.levels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bg-3);border:1px solid var(--bg-3);border-radius:4px;margin:2rem 0;position:relative}
 .level-card{background:#fff;padding:1.5rem 1.2rem;border-top:3px solid}
 .level-micro{border-top-color:var(--red)}
 .level-meso{border-top-color:var(--amber)}
@@ -390,7 +415,9 @@ body::before{
 .mtw p{font-size:.82rem;color:rgba(246,244,239,.7);margin:0;line-height:1.65}
 
 /* ═══ CASES ═══ */
-.case-study{background:#fff;border:1px solid var(--bg-3);border-radius:6px;margin-bottom:1.75rem;overflow:hidden;scroll-margin-top:calc(var(--topnav-h) + 1.5rem);box-shadow:0 1px 3px rgba(0,0,0,.02)}
+.case-study{background:#fff;border:1px solid var(--bg-3);border-radius:6px;margin-bottom:1.75rem;scroll-margin-top:calc(var(--topnav-h) + 1.5rem);box-shadow:0 1px 3px rgba(0,0,0,.02)}
+.case-study.open{overflow:visible}
+.case-header{border-radius:6px}
 .case-title{font-size:1.7rem!important;line-height:1.2}
 .case-ctx,.case-context{font-size:1.05rem!important;line-height:1.85}
 .case-ctx-box,.case-question{font-size:1.02rem!important;line-height:1.8}
@@ -472,19 +499,22 @@ body::before{
 .arg-list li::before{content:'—';position:absolute;left:0;color:var(--ink-4)}
 .arg-list li:last-child{border-bottom:none}
 /* v4 philosopher deep dive */
-.philo-deep{margin:1.75rem 0;border:1px solid var(--bg-3);border-radius:6px;overflow:hidden}
+.philo-deep{margin:1.75rem 0;border:1px solid var(--bg-3);border-radius:6px;position:relative}
 .philo-deep-header{background:var(--ink);padding:1rem 1.4rem;display:flex;align-items:flex-start;gap:1.1rem}
 .philo-deep-initial{font-family:var(--serif);font-size:3rem;font-weight:400;line-height:1;color:rgba(246,244,239,.13);flex-shrink:0}
 .philo-deep-portrait{flex-shrink:0;width:64px;height:64px;border-radius:50%;overflow:hidden;background:var(--bg-2);border:1px solid rgba(246,244,239,.12)}
 .philo-deep-portrait img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.25) contrast(1.02)}
-.philo-deep-portrait-dual{width:96px;height:64px;border-radius:34px;display:flex;gap:2px;background:transparent;border:none;overflow:visible}
-.philo-deep-portrait-dual img{width:46px;height:64px;border-radius:50%;border:1px solid rgba(246,244,239,.12);background:var(--bg-2)}
-.philo-deep-portrait-dual img:last-child{margin-left:-12px}
+.philo-deep-portrait-dual{width:108px;height:64px;border-radius:0;display:flex;gap:0;align-items:center;background:transparent;border:none;overflow:visible;position:relative}
+.philo-deep-portrait-dual img{width:60px;height:60px;border-radius:50%;border:2px solid var(--ink);background:var(--bg-2);object-fit:cover;box-shadow:0 0 0 1px rgba(125,184,232,.25),0 4px 8px rgba(0,0,0,.35);transition:transform .3s ease,z-index 0s;position:relative}
+.philo-deep-portrait-dual img:first-child{z-index:2}
+.philo-deep-portrait-dual img:last-child{margin-left:-18px;z-index:1}
+.philo-deep-portrait-dual:hover img:first-child{transform:translateX(-4px) scale(1.06);z-index:3}
+.philo-deep-portrait-dual:hover img:last-child{transform:translateX(4px) scale(1.06);z-index:3}
 .philo-deep-meta{flex:1}
 .philo-deep-name{font-family:var(--serif);font-size:1.15rem;font-weight:500;color:#f6f4ef;line-height:1.2;margin-bottom:.2rem}
 .philo-deep-dates{font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:rgba(246,244,239,.32);display:block;margin-bottom:.15rem}
 .philo-deep-school{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#7db8e8}
-.philo-deep-quote{font-family:var(--serif);font-size:.92rem;font-style:italic;color:rgba(246,244,239,.55);padding:.65rem 1.4rem;background:rgba(0,0,0,.18);border-top:1px solid rgba(255,255,255,.07);line-height:1.65}
+.philo-deep-quote{font-family:var(--serif);font-size:.95rem;font-style:italic;color:rgba(246,244,239,.92);padding:.85rem 1.4rem;background:linear-gradient(180deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,.55) 100%);border-top:1px solid rgba(125,184,232,.22);border-left:3px solid #7db8e8;line-height:1.7;letter-spacing:.005em;border-radius:0 0 6px 6px}
 .philo-deep-body{padding:1.25rem 1.4rem;background:#fff}
 .philo-deep-concept{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.4rem}
 .philo-deep-text{font-size:.87rem;color:var(--ink-2);line-height:1.82;margin-bottom:.85rem}
@@ -771,7 +801,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
     <span class="kicker">TAED1 — Universitat Politècnica de Catalunya · Curs 2025–26</span>
     <h1>El Conseller-IA: Implicacions Ètiques i d'Enginyeria d'Automatitzar el <em>Territori i l'Habitatge</em></h1>
     <p class="authors"><strong>Ander Miranda · Pablo Fernández · Oriol Parent · Pau González</strong><br>Universitat Politècnica de Catalunya · Barcelona, Spain</p>
-    <p class="desc">Anàlisi multidimensional —tècnica, jurídica, ètica i material— de la integració de sistemes d'intel·ligència artificial en l'administració pública catalana. Quatre pilars teòrics, tres casos d'estudi i un manifest de sobirania digital.</p>
+    <p class="desc">¿Què passa quan un Random Forest amb confiança <span style="font-family:var(--mono);color:#7db8e8">p&nbsp;&gt;&nbsp;0.95</span> emet una ordre de desnonament? ¿Quan una optimització NSGA-II decideix la frontera de Pareto entre 3 000 famílies sense sostre i 8 % d'emissions de CO₂? Aquest blog disseca, des de l'enginyeria de dades, la materialitat algorítmica i la <em>moral exception problem</em> d'automatitzar la Conselleria de Territori — amb SHAP, GNNExplainer, RLHF, phronesis aristotèlica i 3 600 MWh/any de petjada computacional.</p>
     <div class="hero-meta">
       <span class="hero-tag">EU AI Act 2024/1689</span>
       <span class="hero-tag">GDPR</span>
@@ -785,11 +815,11 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
 <!-- ═══ EXECUTIVE SUMMARY ═══ -->
 <section class="exec-summary reveal" id="summary">
   <div class="exec-card">
-    <span class="exec-label">Resum executiu · Abstract</span>
+    <span class="exec-label">Resum executiu · Abstract · TAED1 · UPC GCED</span>
     <h2>Quan la decisió pública es codifica</h2>
-    <p>Aquest article analitza les implicacions sociotècniques i ètiques de delegar la gestió de la Conselleria de Territori i Habitatge de la Generalitat de Catalunya a un sistema d'intel·ligència artificial —el «Conseller-IA». Les funcions centrals (planificació urbana, accessibilitat a l'habitatge i mobilitat) es modelen com a problemes d'optimització multi-objectiu on l'eficiència tècnica entra freqüentment en conflicte amb la vulnerabilitat social i la sostenibilitat ambiental.</p>
-    <p>Presentem un marc tècnic rigorós que especifica els conjunts de variables d'entrada, arquitectures de model i mecanismes d'<em>explicabilitat</em> per a cada subdomini, juntament amb una avaluació quantificada de la petjada material del sistema —energia, aigua i minerals crítics— en el context de l'escassetat regional. A través de tres casos d'estudi avaluem els límits de la decisió algorítmica.</p>
-    <p class="exec-thesis">El nostre tesi central: l'IA pot millorar l'eficiència administrativa, però <em>no pot substituir la phronesis humana</em> davant dels dilemes ètics. Cal un model de governança «human-in-the-loop» basat en els principis de responsabilitat, reversibilitat i representació democràtica.</p>
+    <p>Imagina que la Conselleria de Territori i Habitatge esdevé una <em>pipeline</em>. L'entrada: 580–660 TB de cadastre, padró, sensors de qualitat de l'aire, LiDAR i registres d'inspecció. El model: un ensemble de Transformers (BERT-base per a NLP normatiu), CNN sobre rasters d'1 m de resolució, XGBoost per a risc geològic, Random Forest per a classificació d'infraccions d'habitabilitat, GNNs per a anàlisi de segregació veïnal i NSGA-II per a optimització multi-objectiu d'assignació d'habitatge. La sortida: ordres administratives amb impacte legal immediat sobre persones reals.</p>
+    <p>Aquest blog formalitza el «Conseller-IA» com a problema sociotècnic des de la perspectiva de l'enginyeria de dades. Quantifiquem la petjada material (~3 600 MWh/any · 2,9–4,3 ML d'aigua de refrigeració · cobalt, liti i terres rares amb traçabilitat geopolítica), auditem la <em>explicability gap</em> amb SHAP, GNNExplainer i visualització de la frontera de Pareto, i demostrem amb tres casos d'estudi que <em>l'optimització d'una funció de pèrdua escalar és un acte polític encobert</em>: cada hiperparàmetre codifica un judici de valor que cap RLHF democràtic pot resoldre.</p>
+    <p class="exec-thesis">Tesi central: cap mètrica AUC, F1 o NDCG resol la <em>moral exception problem</em>. La phronesis aristotèlica no és vectorialitzable; per tant, l'arquitectura ha d'incloure <em>hard rules</em> a la capa de decisió (no de model) que aturin l'execució automàtica davant senyals de vulnerabilitat. <em>Human-in-the-loop</em> com a requisit d'enginyeria, no com a preferència política.</p>
     <div class="kwlist">
       <span class="kw">Algorithmic Governance</span>
       <span class="kw">Public Administration</span>
@@ -806,7 +836,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
   <!-- ============ COL MAIN ============ -->
   <div class="col-main">
 
-    <p class="intro-block">L'objectiu d'aquest treball no és l'automatització del poder administratiu, sinó <em>l'augmentació</em> de la decisió humana amb transparència, responsabilitat i respecte tant dels límits físics del territori com dels drets fonamentals de la ciutadania.</p>
+    <p class="intro-block">Com a estudiants de 3r curs del Grau en Ciència i Enginyeria de Dades (UPC · GCED), abordem aquest treball amb la mateixa metodologia que aplicaríem a qualsevol <em>ML system</em> en producció: especificació de variables, anàlisi de la <em>loss function</em>, mètriques desagregades, audit del <em>training distribution</em> i <em>fairness constraints</em> explícits. Però descobrim, capa rere capa, que <em>la millor arquitectura tècnica és insuficient si la funció objectiu codifica un judici polític sense fer-lo explícit</em>.</p>
 
     <!-- ══════ PILAR 1 ══════ -->
     <section id="p1" class="pillar reveal">
@@ -818,7 +848,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
         </div>
       </div>
 
-      <p class="body-text">L'arquitectura del Conseller-IA es concep com un sistema sociotècnic <em>híbrid i multi-capa</em>, no un algorisme monolític. Per gestionar les funcions de la Conselleria es requereix una infraestructura que integri paradigmes predictius i generatius, cadascun operant sobre conjunts de variables específics del domini. Tots els models operen sobre dades sensibles que afecten directament el dret a l'habitatge digne (art. 47 CE) i l'ordenació del territori (art. 9.9 EAC).</p>
+      <p class="body-text">Cap LLM resol per si sol la complexitat del territori. El Conseller-IA s'ha de dissenyar com un <em>sistema sociotècnic compost</em>: quatre subsistemes verticals (planificació, urbanisme, habitatge, mobilitat) amb pipelines independents, <em>feature stores</em> federats, i una capa d'orquestració que normalitza outputs heterogenis. Cada subsistema treballa amb un tensor d'entrada de naturalesa diferent —rasters geoespacials, sèries temporals IoT, grafs de connectivitat veïnal, registres tabulars xifrats— i exigeix una arquitectura model-específica. La temptació enginyerística d'<em>end-to-end deep learning</em> sobre tot el corpus no és només una mala decisió tècnica: és una mala decisió política, perquè col·lapsa decisions ètiques heterogènies en un sol vector de pesos no auditable.</p>
 
       <h3 class="sub-sub-heading">Subsistema 1 · Planificació territorial</h3>
       <p class="body-text">Combinació de <strong>Transformers (LLM)</strong> per a l'anàlisi de coherència normativa amb <strong>CNN</strong> per al processament d'imatges satèl·lit. La capa predictiva utilitza <strong>Gradient Boosting (XGBoost)</strong> per a classificació de risc geològic i d'inundabilitat. Ingereix mapes de vulnerabilitat de l'ICGC (raster 1m, ~90 TB), indicadors socioeconòmics de l'IDESCAT, sèries històriques del Servei de Vigilància de la Contaminació i registre cadastral (~150 TB).</p>
@@ -903,7 +933,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
         </div>
       </div>
 
-      <p class="body-text">L'avaluació d'una entitat algorítmica que governa polítiques d'habitatge requereix una aproximació multi-dimensional. Cap model ètic és suficient per si sol; cadascun captura una dimensió que els altres no veuen.</p>
+      <p class="body-text">Un model de regressió té una <em>loss function</em>; un humà phronètic, no. Aquest pilar formalitza les quatre lents ètiques que apliquem com a <em>regularitzadors</em> sobre l'optimització algorítmica del Conseller-IA. Treballem una <em>multi-objective ethical loss</em>: <code style="font-family:var(--mono);background:var(--bg-2);padding:1px 6px;border-radius:3px;font-size:.92em">ℒ = α·U(teleològic) + β·D(deontològic) + γ·V(virtut) + δ·C(cura)</code>, on els pesos α, β, γ, δ no són hiperparàmetres a optimitzar via grid-search: són decisions polítiques explícites que requereixen deliberació democràtica. La temptació enginyerística d'<em>aprendre</em> aquests pesos via RLHF és precisament el problema que critiquem.</p>
 
       <h3 class="sub-sub-heading">Ètica teleològica · Conseqüències</h3>
       <p class="body-text">Avaluació basada en resultats. Per al Conseller-IA es tradueix en una funció objectiu que maximitza utilitat global. <em>Risc</em>: un algorisme estrictament teleològic pot marginar outliers estadístics, sacrificant minories vulnerables per assolir un òptim matemàtic per a la majoria. L'<strong>imperatiu de responsabilitat de Hans Jonas</strong> hi afegeix la dimensió temporal: el sistema ha de ponderar la permanència de la vida humana futura encara que entri en conflicte amb la urgència social immediata.</p>
@@ -942,7 +972,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
       </div>
 
       <p class="body-text">
-        Tot sistema d'IA pública genera efectes en tres escales d'anàlisi simultànies. Aquesta tríada, aplicada sistemàticament a cada subsistema de la Conselleria, permet identificar on es concentren els riscos i on la supervisió humana és imprescindible. El marc incorpora la crítica de <span class="tt"><span class="tt-trigger">Virginia Eubanks</span><span class="tt-box"><span class="tt-title">Virginia Eubanks (2018)</span>A "Automating Inequality" documenta com els sistemes algorítmics de benestar social als EUA reprodueixen i amplien les desigualtats estructurals. Els seus tres estudis de cas (Indiana, Allegheny, Los Angeles) mostren com la «objectivitat» algorítmica és en realitat una forma d'invisibilitzar la violència institucional.</span></span><a href="#r13" class="cite-link">[13]</a> sobre com els algorismes de benestar reprodueixen desigualtats estructurals.
+        Quan un classificador desenvolupa una predicció, l'impacte no es propaga pel mateix canal. Una mateixa decisió algorítmica genera <em>efectes desagregables</em> en tres nivells d'anàlisi simultanis —individu, organització, sistema— i cadascun exigeix mètriques d'avaluació diferents (<em>per-decision SHAP</em> al micro, <em>automation bias rate</em> al meso, <em>disparate impact ratio</em> al macro). El marc incorpora la crítica empírica de <span class="tt"><span class="tt-trigger">Virginia Eubanks</span><span class="tt-box"><span class="tt-title">Virginia Eubanks · Automating Inequality (2018)</span>Estudia tres pipelines algorítmics de benestar social als EUA (Indiana, Allegheny, LA). Demostra empíricament que un sistema optimitzat per minimitzar <em>false positives</em> en frau converteix <em>false negatives</em> en frau real en mortalitat administrativa. La «neutralitat» algorítmica és una violència institucional reescrita en sintaxi Python.</span></span><a href="#r13" class="cite-link">[13]</a>: <em>l'objectivitat algorítmica és matemàticament neutra però socialment esbiaixada</em>, perquè el biaix viu al <em>training distribution</em>, no al model.
       </p>
 
       <div class="levels-grid">
@@ -1071,7 +1101,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
         </div>
       </div>
 
-      <p class="body-text">Un element distintiu del marc teòric d'aquest projecte és la incorporació de la <em>materialitat</em> dels sistemes d'IA com a variable ètica intrínseca. La «digitalització» del territori no és neutra: consumeix energia, aigua i minerals escassos. Apareix una paradoxa sistèmica: una IA desplegada per optimitzar la sostenibilitat territorial pot degradar l'entorn local a través de la seva pròpia operació.</p>
+      <p class="body-text">El <em>cloud</em> no és cloud. És un edifici a Sant Cugat amb torres de refrigeració evaporatives, una connexió de 25 MW, una cua de re-entrenament cada 72 hores i un cost hídric que en fase 3 de sequera de l'ACA cau de cap a les granges veïnes. Aquest pilar quantifica la <em>materialitat algorítmica</em> com a quarta dimensió ètica del Conseller-IA, al costat de l'ètica deontològica, teleològica i de la cura. Mètriques que farem servir: <em>Power Usage Effectiveness</em> (PUE), <em>Water Usage Effectiveness</em> (WUE en L/kWh), <em>kg CO₂-eq per inference call</em> i <em>life-cycle carbon footprint</em> del hardware en termes de cobalt, liti i terres rares. Paradoxa central: una IA dissenyada per optimitzar la sostenibilitat territorial pot degradar l'entorn local per la seva pròpia operació computacional.</p>
 
       <span class="section-label">A · Sostenibilitat ambiental</span>
       <h3 class="sub-sub-heading">Consum energètic per subsistema</h3>
@@ -1179,7 +1209,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
           <span class="case-chevron">▾</span>
         </div>
         <div class="case-body">
-          <p class="case-context">La Conseller-IA detecta, via <span class="tt"><span class="tt-trigger">encreuament de dades massives</span><span class="tt-box"><span class="tt-title">Data linkage</span>Procés tècnic que combina registres heterogenis (Padró, consums d'aigua i llum, cadastre) per identificar patrons anòmals. Véliz (2020) adverteix que aquesta tècnica converteix la infraestructura pública en un instrument de vigilància, especialment intens sobre els barris populars.</span></span> (Padró Municipal i consums d'aigua/llum), un antic local comercial habitat per una família amb dos menors d'edat. Seguint estrictament el <span class="tt"><span class="tt-trigger">Decret 141/2012</span><span class="tt-box"><span class="tt-title">DOGC, 2012</span>Estableix els requisits mínims d'habitabilitat a Catalunya: superfície útil, ventilació, il·luminació natural, instal·lacions sanitàries. Cabal mínim de ventilació de <strong>0,55 m³/h·m²</strong>. La seva aplicació estricta per part d'un algorisme pot generar conflicte amb el dret a l'habitatge digne (art. 47 CE).</span></span>, el sistema emet <strong>automàticament</strong> una ordre de cessament d'ús residencial per manca de ventilació i llum natural adequada.</p>
+          <p class="case-context">Un Random Forest amb 500 estimadors, entrenat sobre 300 TB d'inspeccions històriques, retorna <code style="font-family:var(--mono);background:var(--bg-2);padding:1px 6px;border-radius:3px;font-size:.92em">P(infracció=True) = 0.97</code> per a una unitat residencial detectada via <span class="tt"><span class="tt-trigger">data linkage</span><span class="tt-box"><span class="tt-title">Data linkage · record-level join</span><em>Inner join</em> sobre claus quasi-identificadores (adreça normalitzada, NIF anonimitzat, codi cadastral) entre Padró Municipal, consums d'aigua/llum i cadastre. Tècnicament és un <em>fuzzy matching</em> amb similitud de Jaro-Winkler &gt; 0.92. Èticament, transforma la infraestructura pública en un panòpticon asimètric: la precarietat deixa traces, la riquesa no.</span></span> (Padró ⨝ AGBAR ⨝ Endesa). La unitat: un antic local comercial habitat per una família amb dos menors. La feature dominant a l'anàlisi SHAP: cabal de ventilació mesurat a <code style="font-family:var(--mono);background:var(--bg-2);padding:1px 6px;border-radius:3px;font-size:.92em">0.31 m³/h·m²</code>, sota el llindar de <span class="tt"><span class="tt-trigger">Decret 141/2012</span><span class="tt-box"><span class="tt-title">DOGC · Decret 141/2012</span>Marc tècnic d'habitabilitat: superfície útil mínima, cabal de ventilació, il·luminació natural, instal·lacions sanitàries. Llindar reglamentari de ventilació: <em>0.55 m³/h·m²</em>. Per al classificador és un <em>hard threshold</em>; per a una família amb menors, és el límit entre tenir sostre o no tenir-lo.</span></span>. Output del pipeline: ordre administrativa automàtica de cessament d'ús residencial. <em>Sense intervenció humana en cap moment del cicle de vida de la decisió.</em></p>
           <p class="case-question"><strong>Pregunta central:</strong> ¿Pot una administració basada en dades garantir la dignitat humana si redueix la «seguretat» a paràmetres bio-físics, ignorant la seguretat socio-existencial? La tensió és entre la <span class="tt"><span class="tt-trigger">Justícia Formal</span><span class="tt-box"><span class="tt-title">Iustitia formalis</span>Aplicació imparcial i universal de la norma, sense considerar les particularitats del cas. És el principi nuclear de l'Estat de dret: la llei és igual per a tothom. La IA encarna aquest ideal de forma absoluta.</span></span> (aplicació imparcial de la norma) i la <span class="tt"><span class="tt-trigger">Justícia Material</span><span class="tt-box"><span class="tt-title">Iustitia materialis</span>Equitat substantiva que s'ajusta a la fragilitat del cas concret. Aristòtil l'anomena <em>epieikeia</em>: la correcció de la llei allà on és massa universal per al cas particular. Exigeix <strong>phronesis</strong> humana.</span></span> (equitat que s'ajusta a la fragilitat del cas concret).</p>
 
           <span class="philos-section-label">Eixos conceptuals — Marc teòric del cas</span>
@@ -1251,7 +1281,10 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
           <!-- JOAN TRONTO / BEGOÑA ROMÁN -->
           <div class="philo-deep">
             <div class="philo-deep-header">
-              <div class="philo-deep-portrait"><img src="https://raw.githubusercontent.com/FernanESP0/Images-TAED/main/J%20Tronto.jpg" alt="Retrat de Joan Tronto" loading="lazy" referrerpolicy="no-referrer"></div>
+              <div class="philo-deep-portrait philo-deep-portrait-dual" aria-label="Joan Tronto i Begoña Román">
+                <img src="https://raw.githubusercontent.com/FernanESP0/Images-TAED/main/J%20Tronto.jpg" alt="Retrat de Joan Tronto" loading="lazy" referrerpolicy="no-referrer">
+                <img src="https://raw.githubusercontent.com/FernanESP0/Images-TAED/main/Begona-Roman.jpg" alt="Retrat de Begoña Román" loading="lazy" referrerpolicy="no-referrer">
+              </div>
               <div class="philo-deep-meta">
                 <div class="philo-deep-name">Joan Tronto &amp; Begoña Román</div>
                 <span class="philo-deep-dates">Tronto: 1952– · CUNY · Román: 1964– · Universitat de Barcelona</span>
