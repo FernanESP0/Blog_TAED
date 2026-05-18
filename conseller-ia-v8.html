@@ -182,6 +182,13 @@ body::before{
 .nav-dropdown-item.active{color:#7db8e8;background:rgba(125,184,232,.08)}
 .nav-dd-num{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;color:rgba(125,184,232,.85);min-width:18px;padding-top:3px;font-weight:500;text-align:center}
 .nav-dd-title{font-size:.83rem;line-height:1.45;flex:1}
+/* Sub-item indentation for Case 1's nested subcases */
+.nav-dropdown-item.nav-dd-sub{padding-left:1.85rem;background:rgba(255,255,255,.015)}
+.nav-dropdown-item.nav-dd-sub .nav-dd-num{color:rgba(125,184,232,.55);font-size:8.5px;letter-spacing:.1em}
+.nav-dropdown-item.nav-dd-sub .nav-dd-title{font-size:.78rem;color:rgba(246,244,239,.62)}
+.nav-dropdown-item.nav-dd-sub:hover .nav-dd-title{color:#f6f4ef}
+.nav-dropdown-item.nav-dd-sub::before{content:'';position:absolute;left:1.05rem;top:50%;width:.5rem;height:1px;background:rgba(125,184,232,.3)}
+.nav-dropdown-item.nav-dd-sub{position:relative}
 .sidebar-foot{padding:.4rem .95rem;border:none;font-family:var(--mono);font-size:.6rem;color:rgba(246,244,239,.4);line-height:1.25;display:flex;flex-direction:column;justify-content:center;flex-shrink:0;text-align:right;background:rgba(255,255,255,.06);border-radius:999px;letter-spacing:.05em;text-transform:uppercase;margin-left:.5rem}
 
 /* mobile menu toggle (hidden on desktop) */
@@ -436,6 +443,26 @@ body::before{
 .case-study{background:#fff;border:1px solid var(--bg-3);border-radius:6px;margin-bottom:1.75rem;scroll-margin-top:calc(var(--topnav-h) + 1.5rem);box-shadow:0 1px 3px rgba(0,0,0,.02)}
 .case-study.open{overflow:visible}
 .case-header{border-radius:6px}
+
+/* ═══ NESTED SUBCASES (inside Case 1) ═══ */
+.subcase-index{margin-top:1.75rem;padding-top:1.4rem;border-top:1px solid var(--bg-3)}
+.subcase-index-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.45rem}
+.subcase-index-hint{font-size:.92rem;color:var(--ink-3);line-height:1.7;margin-bottom:1.25rem;font-style:italic}
+.case-study.subcase{margin-bottom:.85rem;border:1px solid var(--bg-3);background:#fcfaf6;box-shadow:none;border-radius:5px;scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
+.case-study.subcase .case-header{padding:1rem 1.25rem}
+.case-study.subcase .case-title{font-size:1.18rem!important;line-height:1.25}
+.case-study.subcase .case-body{padding:0 1.25rem 1.25rem;background:#fff;border-top:1px solid var(--bg-2)}
+.case-study.subcase .case-tag{font-size:8.5px;padding:2.5px 7px}
+.subcase-num{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:var(--accent);background:var(--accent-lt);padding:3px 8px;border-radius:2px;text-transform:uppercase;display:inline-block;margin-right:.55rem;vertical-align:middle;font-weight:500}
+.subcase-num-a{background:var(--accent-lt);color:var(--accent)}
+.subcase-num-b{background:var(--amber-lt);color:var(--amber)}
+.subcase-num-c{background:var(--green-lt);color:var(--green)}
+
+/* ═══ ARTICLE DOWNLOAD BUTTON ═══ */
+.article-download{display:inline-flex;align-items:center;gap:.45rem;background:var(--accent-lt);color:var(--accent);padding:7px 16px;border-radius:999px;text-decoration:none;font-size:.92rem;font-weight:500;margin-left:.4rem;transition:all var(--t);border:1px solid color-mix(in srgb,var(--accent) 22%,transparent);font-family:var(--sans);white-space:nowrap}
+.article-download::before{content:'📄';font-size:.95em}
+.article-download:hover{background:var(--accent);color:#fff;transform:translateY(-1px);box-shadow:0 4px 14px rgba(27,63,110,.28)}
+.article-download .ad-size{font-family:var(--mono);font-size:.78em;opacity:.75;margin-left:.15rem}
 .case-title{font-size:1.7rem!important;line-height:1.2}
 .case-ctx,.case-context{font-size:1.05rem!important;line-height:1.85}
 .case-ctx-box,.case-question{font-size:1.02rem!important;line-height:1.8}
@@ -522,6 +549,9 @@ body::before{
 .philo-deep-initial{font-family:var(--serif);font-size:3rem;font-weight:400;line-height:1;color:rgba(246,244,239,.13);flex-shrink:0}
 .philo-deep-portrait{flex-shrink:0;width:64px;height:64px;border-radius:50%;overflow:hidden;background:var(--bg-2);border:1px solid rgba(246,244,239,.12)}
 .philo-deep-portrait img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.25) contrast(1.02)}
+/* Diagram variant: rectangular, white background, "contain" fit (for technical figures) */
+.philo-deep-portrait-diagram{flex-shrink:0;width:96px;height:64px;border-radius:6px;overflow:hidden;background:#fff;border:1px solid rgba(246,244,239,.18);padding:3px;display:flex;align-items:center;justify-content:center}
+.philo-deep-portrait-diagram img{width:100%;height:100%;object-fit:contain;display:block;filter:none}
 .philo-deep-portrait-dual{width:108px;height:64px;border-radius:0;display:flex;gap:0;align-items:center;background:transparent;border:none;overflow:visible;position:relative}
 .philo-deep-portrait-dual img{width:60px;height:60px;border-radius:50%;border:2px solid var(--ink);background:var(--bg-2);object-fit:cover;box-shadow:0 0 0 1px rgba(125,184,232,.25),0 4px 8px rgba(0,0,0,.35);transition:transform .3s ease,z-index 0s;position:relative}
 .philo-deep-portrait-dual img:first-child{z-index:2}
@@ -787,8 +817,11 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
         <span class="dot"></span>Casos<span class="nav-chev" aria-hidden="true">▾</span>
       </button>
       <div class="nav-dropdown-menu" role="menu">
-        <a class="nav-dropdown-item" href="#case1" role="menuitem"><span class="nav-dd-num">I</span><span class="nav-dd-title">Local inhabitable · Justícia formal vs. material</span></a>
-        <a class="nav-dropdown-item" href="#case2" role="menuitem"><span class="nav-dd-num">II</span><span class="nav-dd-title">Centre social irregular · Seguretat vs. Capital social</span></a>
+        <a class="nav-dropdown-item" href="#case1" role="menuitem"><span class="nav-dd-num">I</span><span class="nav-dd-title">Auditoria de vulnerabilitat en 3 nivells</span></a>
+        <a class="nav-dropdown-item nav-dd-sub" href="#case1a" role="menuitem"><span class="nav-dd-num">1a</span><span class="nav-dd-title">Inicial · Local inhabitable</span></a>
+        <a class="nav-dropdown-item nav-dd-sub" href="#case1b" role="menuitem"><span class="nav-dd-num">1b</span><span class="nav-dd-title">Intermedi · Centre social irregular</span></a>
+        <a class="nav-dropdown-item nav-dd-sub" href="#case1c" role="menuitem"><span class="nav-dd-num">1c</span><span class="nav-dd-title">Final · El corredor verd</span></a>
+        <a class="nav-dropdown-item" href="#case2" role="menuitem"><span class="nav-dd-num">II</span><span class="nav-dd-title">Optimització multi-objectiu · Habitatge vs. Sostenibilitat</span></a>
         <a class="nav-dropdown-item" href="#case3" role="menuitem"><span class="nav-dd-num">III</span><span class="nav-dd-title">Planta de biomassa · Estètica vs. Utilitat</span></a>
       </div>
     </div>
@@ -1211,22 +1244,47 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
     <!-- ══════ CASES ══════ -->
     <section id="cases" class="reveal" style="margin-top:4rem">
       <h2 class="section-heading">Casos d'estudi</h2>
-      <p class="section-sub">Tres dilemes que articulen la tensió entre legalitat tècnica i justícia social. Cadascun inclou la <em>ratio decidendi</em> i les implicacions enginyerístiques.</p>
+      <p class="section-sub">Tres casos d'estudi que articulen la tensió entre legalitat tècnica i justícia social. Cadascun inclou la <em>ratio decidendi</em> i les implicacions enginyerístiques. <a class="article-download" href="https://raw.githubusercontent.com/FernanESP0/Images-TAED/main/tae%20articulo.pdf" target="_blank" rel="noopener noreferrer" download="The_AI_Minister_TAED1_2026.pdf">Descarrega l'article complet <span class="ad-size">(PDF · 611 KB)</span></a></p>
 
-      <!-- CAS 1 — v4 content i format: Local inhabitable -->
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <!-- ═══ CAS 1 — Auditoria de vulnerabilitat en 3 nivells operatius ═ -->
+      <!-- ═══════════════════════════════════════════════════════════════ -->
       <div class="case-study" id="case1">
         <div class="case-header" onclick="toggleCase('case1')">
           <div>
             <div class="case-tag-row">
-              <span class="case-tag tag-legalitat">Legalitat</span>
-              <span class="case-tag tag-vulnerabilitat">Vulnerabilitat</span>
-              <span class="case-tag tag-algorisme">Ordre automàtica</span>
+              <span class="case-tag tag-legalitat">Decret 141/2012</span>
+              <span class="case-tag tag-vulnerabilitat">Vulnerabilitat escalada</span>
+              <span class="case-tag tag-algorisme">3 nivells operatius</span>
             </div>
-            <div class="case-title">Cas 1 — El local inhabitable: Justícia formal vs. Justícia material</div>
+            <div class="case-title">Cas 1 — Auditoria de vulnerabilitat en tres nivells</div>
           </div>
           <span class="case-chevron">▾</span>
         </div>
         <div class="case-body">
+          <p class="case-context">El primer cas d'estudi és, en realitat, un <em>stress test</em> progressiu sobre el mateix <em>pipeline</em> tècnic: un Random Forest entrenat amb 300 TB d'inspeccions històriques, una capa d'atribució SHAP per a l'explicabilitat, i una capa de regles dures (<em>hard rules</em>) a la decisió final. Tres escenaris escalats —individual, comunitari, intergeneracional— posen a prova el mateix sistema en condicions creixents de complexitat moral. La pregunta arquitectural és única: <em>en quina capa (entrenament, model, regla de decisió o revisió humana) cal codificar les restriccions de vulnerabilitat perquè l'algorisme no produeixi decisions formalment legals però substantivament injustes?</em></p>
+
+          <p class="case-question"><strong>Objectiu d'aquesta divisió en tres nivells:</strong> separar les tres dimensions de la fal·làcia <em>ad legalem</em> que el Conseller-IA podria materialitzar. Al <em>nivell inicial</em> auditem el conflicte entre la norma universal i el cas particular d'un individu vulnerable. Al <em>nivell intermedi</em> escalem l'impacte a una comunitat sencera (xarxa de suport veïnal amb menors). Al <em>nivell final</em> alliberem l'horitzó temporal i confrontem el present vulnerable amb el futur sostenible. Cada subcàs aporta una restricció de disseny nova al sistema, i totes convergeixen en el mateix principi: la <em>reserva humana</em> és un requisit d'enginyeria, no una preferència política.</p>
+
+          <!-- ═══ SUB-CASE INDEX (nested accordions) ═══ -->
+          <div class="subcase-index">
+            <span class="subcase-index-label">Índex · 3 subcasos operatius</span>
+            <p class="subcase-index-hint">Despleguen el subcàs corresponent fent clic al títol. Cada subcàs és independent però comparteix el <em>pipeline</em> tècnic descrit a la introducció.</p>
+
+            <!-- ─── SUBCAS 1a (INICIAL) — Local inhabitable ─── -->
+            <div class="case-study subcase" id="case1a">
+              <div class="case-header" onclick="toggleCase('case1a')">
+                <div>
+                  <div class="case-tag-row">
+                    <span class="subcase-num subcase-num-a">1a · Inicial</span>
+                    <span class="case-tag tag-legalitat">Legalitat</span>
+                    <span class="case-tag tag-vulnerabilitat">Família amb menors</span>
+                  </div>
+                  <div class="case-title">El local inhabitable: Justícia formal vs. Justícia material</div>
+                </div>
+                <span class="case-chevron">▾</span>
+              </div>
+              <div class="case-body">
           <p class="case-context">Un Random Forest amb 500 estimadors, entrenat sobre 300 TB d'inspeccions històriques, retorna <code style="font-family:var(--mono);background:var(--bg-2);padding:1px 6px;border-radius:3px;font-size:.92em">P(infracció=True) = 0.97</code> per a una unitat residencial detectada via <span class="tt"><span class="tt-trigger">data linkage</span><span class="tt-box"><span class="tt-title">Data linkage · record-level join</span><em>Inner join</em> sobre claus quasi-identificadores (adreça normalitzada, NIF anonimitzat, codi cadastral) entre Padró Municipal, consums d'aigua/llum i cadastre. Tècnicament és un <em>fuzzy matching</em> amb similitud de Jaro-Winkler &gt; 0.92. Èticament, transforma la infraestructura pública en un panòpticon asimètric: la precarietat deixa traces, la riquesa no.</span></span> (Padró ⨝ AGBAR ⨝ Endesa). La unitat: un antic local comercial habitat per una família amb dos menors. La feature dominant a l'anàlisi SHAP: cabal de ventilació mesurat a <code style="font-family:var(--mono);background:var(--bg-2);padding:1px 6px;border-radius:3px;font-size:.92em">0.31 m³/h·m²</code>, sota el llindar de <span class="tt"><span class="tt-trigger">Decret 141/2012</span><span class="tt-box"><span class="tt-title">DOGC · Decret 141/2012</span>Marc tècnic d'habitabilitat: superfície útil mínima, cabal de ventilació, il·luminació natural, instal·lacions sanitàries. Llindar reglamentari de ventilació: <em>0.55 m³/h·m²</em>. Per al classificador és un <em>hard threshold</em>; per a una família amb menors, és el límit entre tenir sostre o no tenir-lo.</span></span>. Output del pipeline: ordre administrativa automàtica de cessament d'ús residencial. <em>Sense intervenció humana en cap moment del cicle de vida de la decisió.</em></p>
           <p class="case-question"><strong>Pregunta central:</strong> ¿Pot una administració basada en dades garantir la dignitat humana si redueix la «seguretat» a paràmetres bio-físics, ignorant la seguretat socio-existencial? La tensió és entre la <span class="tt"><span class="tt-trigger">Justícia Formal</span><span class="tt-box"><span class="tt-title">Iustitia formalis</span>Aplicació imparcial i universal de la norma, sense considerar les particularitats del cas. És el principi nuclear de l'Estat de dret: la llei és igual per a tothom. La IA encarna aquest ideal de forma absoluta.</span></span> (aplicació imparcial de la norma) i la <span class="tt"><span class="tt-trigger">Justícia Material</span><span class="tt-box"><span class="tt-title">Iustitia materialis</span>Equitat substantiva que s'ajusta a la fragilitat del cas concret. Aristòtil l'anomena <em>epieikeia</em>: la correcció de la llei allà on és massa universal per al cas particular. Exigeix <strong>phronesis</strong> humana.</span></span> (equitat que s'ajusta a la fragilitat del cas concret).</p>
 
@@ -1396,20 +1454,20 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
         </div>
       </div>
 
-      <!-- CAS 2 — v4 content i format: Centre social irregular -->
-      <div class="case-study" id="case2">
-        <div class="case-header" onclick="toggleCase('case2')">
-          <div>
-            <div class="case-tag-row">
-              <span class="case-tag tag-comunitat">Xarxa comunitària</span>
-              <span class="case-tag tag-vulnerabilitat">Interès del menor</span>
-              <span class="case-tag tag-algorisme">Precinte automàtic</span>
-            </div>
-            <div class="case-title">Cas 2 — El centre social irregular: Seguretat vs. Capital social</div>
-          </div>
-          <span class="case-chevron">▾</span>
-        </div>
-        <div class="case-body">
+            <!-- ─── SUBCAS 1b (INTERMEDI) — Centre social irregular ─── -->
+            <div class="case-study subcase" id="case1b">
+              <div class="case-header" onclick="toggleCase('case1b')">
+                <div>
+                  <div class="case-tag-row">
+                    <span class="subcase-num subcase-num-b">1b · Intermedi</span>
+                    <span class="case-tag tag-comunitat">Xarxa comunitària</span>
+                    <span class="case-tag tag-vulnerabilitat">Interès del menor</span>
+                  </div>
+                  <div class="case-title">El centre social irregular: Seguretat vs. Capital social</div>
+                </div>
+                <span class="case-chevron">▾</span>
+              </div>
+              <div class="case-body">
           <p class="case-context">L'algoritme detecta un magatzem comercial ocupat per una associació de veïns que dóna berenar i fa repàs escolar a desenes de nens de famílies vulnerables. El local no té llicència ni sortides d'emergència adequades. La IA emet automàticament una <strong>ordre de precinte i clausura immediata</strong> per risc greu d'incendi.</p>
           <p class="case-question"><strong>Diferència clau respecte al Cas 1:</strong> l'impacte ja no és sobre una sola família, sinó sobre tota una xarxa de suport veïnal. La clausura destrueix un <em>ecosistema comunitari</em> que supleix una carència de l'Estat. La <span class="tt"><span class="tt-trigger">Crítica a la Raó Instrumental</span><span class="tt-box"><span class="tt-title">Escola de Frankfurt</span>Horkheimer, Adorno, Habermas i Marcuse adverteixen contra la <strong>raó instrumental</strong>: la racionalitat que calcula mitjans per a fins preestablerts amb màxima eficiència, sense qüestionar els fins mateixos. La <strong>tecnocràcia</strong> consisteix a reduir problemes polítics (valors en conflicte) a problemes tècnics (optimització de dades).</span></span> (Frankfurt): convertir un problema polític de valors en un problema tècnic de dades és tecnocràcia.</p>
 
@@ -1543,6 +1601,270 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
             </div>
           </div>
           <div class="case-consensus"><strong>Proposta de consens:</strong> El disseny del sistema ha de forçar un <em>temps d'espera obligatori</em> (mínim 30 dies) entre la detecció de la infracció i qualsevol ordre executiva quan l'activitat afecti menors en situació de vulnerabilitat. Durant aquest temps, Serveis Socials ha de certificar l'existència d'una alternativa equivalent. L'algorisme és un detector d'alertes, no un agent d'execució.</div>
+              </div>
+            </div>
+
+            <!-- ─── SUBCAS 1c (FINAL) — El corredor verd ─── -->
+            <div class="case-study subcase" id="case1c">
+              <div class="case-header" onclick="toggleCase('case1c')">
+                <div>
+                  <div class="case-tag-row">
+                    <span class="subcase-num subcase-num-c">1c · Final</span>
+                    <span class="case-tag tag-comunitat">Adaptació climàtica</span>
+                    <span class="case-tag tag-algorisme">Horitzó 2050</span>
+                  </div>
+                  <div class="case-title">El corredor verd: Responsabilitat intergeneracional vs. desplaçament present</div>
+                </div>
+                <span class="case-chevron">▾</span>
+              </div>
+              <div class="case-body">
+                <p class="case-context">El subsistema de Planificació Territorial integra un model d'adaptació climàtica que projecta un increment de <code style="font-family:var(--mono);background:var(--bg-2);padding:1px 6px;border-radius:3px;font-size:.92em">+4.2&nbsp;°C</code> d'illa de calor urbana al barri X per al 2050, amb una mortalitat estimada per onades de calor de ~310 morts addicionals per dècada. Una optimització NSGA-II sobre els objectius {<em>reducció CO₂</em>, <em>mortalitat futura evitada</em>, <em>habitabilitat 2050</em>} retorna una solució dominant: enderrocar un nucli residencial vulnerable (~1 200 habitatges, 65 % de la població major de 65 anys o en règim de lloguer social) per construir un corredor verd que, segons el model, protegirà ~60 000 residents futurs. La funció de pèrdua del pipeline és, simplificada, <code style="font-family:var(--mono);background:var(--bg-2);padding:1px 6px;border-radius:3px;font-size:.92em">ℒ = α·Desplaçament<sub>t=0</sub> − β·Habitabilitat<sub>t=2050</sub></code>, i amb <code style="font-family:var(--mono);background:var(--bg-2);padding:1px 6px;border-radius:3px;font-size:.92em">β ≫ α</code> (justificat per la irreversibilitat del dany climàtic), el sistema emet una recomanació d'enderroc i reallotjament.</p>
+
+                <p class="case-question"><strong>Pregunta central:</strong> ¿Pot un algorisme prioritzar la viabilitat d'una població futura estadística contra els drets d'una població present identificada i ja vulnerable? La tensió és entre l'<span class="tt"><span class="tt-trigger">Imperatiu de Responsabilitat</span><span class="tt-box"><span class="tt-title">Hans Jonas (1979)</span>«Actua de tal manera que els efectes de la teva acció siguin compatibles amb la permanència d'una vida humana autèntica.» Imperatiu cosmològic centrat en la viabilitat de les generacions futures. La IA tendeix a Jonas perquè la seva funció de pèrdua pot penalitzar el dany irreversible com a infinit.</span></span> (Jonas) i el <span class="tt"><span class="tt-trigger">Principi de Diferència</span><span class="tt-box"><span class="tt-title">John Rawls · A Theory of Justice (1971)</span>Les desigualtats només són justificables si beneficien els membres menys avantatjats de la societat. Aplicada a un algorisme, exigeix que cada output empitjori almenys un grup vulnerable identificat només si simultàniament millora un grup encara més vulnerable. El càlcul utilitari pur falla aquest test.</span></span> (Rawls), amb la <em>raó instrumental</em> de la Frankfurt com a denominador comú crític.</p>
+
+                <span class="philos-section-label">Eixos conceptuals — Marc teòric del cas</span>
+
+                <!-- HANS JONAS -->
+                <div class="philo-deep">
+                  <div class="philo-deep-header">
+                    <div class="philo-deep-portrait"><img src="https://raw.githubusercontent.com/FernanESP0/Images-TAED/main/Hans%20Jonas.jpg" alt="Retrat de Hans Jonas" loading="lazy" referrerpolicy="no-referrer"></div>
+                    <div class="philo-deep-meta">
+                      <div class="philo-deep-name">Hans Jonas</div>
+                      <span class="philo-deep-dates">1903–1993 · Univ. de Nova York · Frankfurt am Main</span>
+                      <span class="philo-deep-school">Filosofia de la tecnologia · Ètica de la responsabilitat</span>
+                    </div>
+                  </div>
+                  <div class="philo-deep-quote">«Actua de tal manera que els efectes de la teva acció siguin compatibles amb la permanència d'una vida humana autèntica sobre la Terra.» — Das Prinzip Verantwortung, 1979</div>
+                  <div class="philo-deep-body">
+                    <span class="philo-deep-concept">Concepte central · Imperatiu de la Responsabilitat</span>
+                    <p class="philo-deep-text">Jonas reformula l'imperatiu kantià en clau cosmològica. La revolució industrial ha donat a l'ésser humà el poder de comprometre les condicions de vida de les generacions futures; la consciència moral, per tant, ha d'expandir-se en l'eix temporal. La regla de decisió ja no és «què passa si tothom actua com jo» (Kant), sinó «què passa amb la humanitat d'aquí a 100 anys si tothom actua com jo» (Jonas). La <strong>permanència</strong> es converteix en restricció ètica absoluta.</p>
+                    <p class="philo-deep-text">Per a l'enginyeria d'una funció de pèrdua, Jonas implica un <em>discount factor</em> temporal proper a 1: els danys futurs irreversibles no s'han de descomptar com a costos llunyans. El Conseller-IA, optimitzat sota aquesta intuïció, calcula que perdre un nucli residencial avui és un cost finit i compensable; perdre la habitabilitat futura del barri sencer és un cost infinit i irrecuperable. <em>L'asimetria és tècnicament correcta i èticament unilateral.</em></p>
+                    <div class="philo-deep-grid">
+                      <div class="philo-deep-block">
+                        <span class="philo-deep-block-label">El paradigma del «cost irreversible»</span>
+                        <p class="philo-deep-block-text">Si el model penalitza el dany irreversible amb un pes infinit, qualsevol intervenció present que el redueixi domina la frontera de Pareto. Aquesta és una decisió de disseny camuflada com a raonament tècnic: el pes infinit no és una mesura, és un judici de valor implícit codificat al codi.</p>
+                      </div>
+                      <div class="philo-deep-block">
+                        <span class="philo-deep-block-label">Sacrifici utilitarista temporal</span>
+                        <p class="philo-deep-block-text">Sota Jonas pur, l'algorisme tractarà el desplaçament present com a peatge proporcional. El problema no és l'imperatiu de responsabilitat per se, sinó la seva instal·lació silenciosa al cor de la funció objectiu, sense deliberació democràtica sobre <em>quina</em> ponderació intergeneracional és legítima.</p>
+                      </div>
+                    </div>
+                    <div class="philo-deep-connection">
+                      <span class="philo-deep-connection-label">Connexió amb el cas</span>
+                      <strong>La IA tendeix estructuralment a Jonas:</strong> el corredor verd evita un dany catastròfic distribuït en el temps. Però aquesta tendència no és imparcial — és una elecció de pesos. <em>Triar β ≫ α és un acte polític codificat com a hiperparàmetre.</em>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- JOHN RAWLS · vel d'ignorància aplicat al cas -->
+                <div class="philo-deep">
+                  <div class="philo-deep-header">
+                    <div class="philo-deep-portrait"><img src="https://raw.githubusercontent.com/FernanESP0/Images-TAED/main/John%20Rawls.jpg" alt="Retrat de John Rawls" loading="lazy" referrerpolicy="no-referrer"></div>
+                    <div class="philo-deep-meta">
+                      <div class="philo-deep-name">John Rawls</div>
+                      <span class="philo-deep-dates">1921–2002 · Harvard University</span>
+                      <span class="philo-deep-school">Liberalisme polític · Justícia com a equitat</span>
+                    </div>
+                  </div>
+                  <div class="philo-deep-quote">«Les desigualtats socials i econòmiques només són justes si beneficien els membres menys avantatjats de la societat.» — A Theory of Justice, 1971, §13</div>
+                  <div class="philo-deep-body">
+                    <span class="philo-deep-concept">Concepte central · Vel de la Ignorància i Principi de Diferència</span>
+                    <p class="philo-deep-text">El <strong>vel de la ignorància</strong> és un experiment mental: imagina que ets a punt de néixer i ignores el teu lloc futur a la societat (classe, gènere, salut, generació). Quines regles triaries per ordenar la societat? Rawls argumenta que escolliries dos principis lexicogràficament ordenats: (1) llibertats iguals per a tothom, i (2) el <em>Principi de Diferència</em>, segons el qual només són tolerables les desigualtats que millorin la situació dels menys avantatjats.</p>
+                    <p class="philo-deep-text">Aplicat al corredor verd: els residents del barri afectat són, per construcció, entre els menys avantatjats del territori (renda baixa, gent gran, immigració). Els beneficiaris futurs són una població estadística difusa. Una decisió que perjudica un grup vulnerable identificat per <em>benefici esperat</em> sobre un grup futur no identificat fracassa el test rawlsià, independentment del valor d'utilitat agregada.</p>
+                    <div class="philo-deep-grid">
+                      <div class="philo-deep-block">
+                        <span class="philo-deep-block-label">Test operatiu</span>
+                        <p class="philo-deep-block-text">Si la teva decisió empitjora la situació dels més vulnerables presents sense oferir-los <em>a ells</em> un benefici directe, és injusta per construcció. La compensació al col·lectiu agregat no compta com a compensació al grup específic afectat.</p>
+                      </div>
+                      <div class="philo-deep-block">
+                        <span class="philo-deep-block-label">Anti-utilitarisme estructural</span>
+                        <p class="philo-deep-block-text">Rawls va escriure explícitament contra la doctrina utilitarista que justifica el sacrifici d'una minoria pel benefici d'una majoria. La seva teoria és, en aquest sentit, una vacuna ètica contra la funció de pèrdua agregadora.</p>
+                      </div>
+                    </div>
+                    <div class="philo-deep-connection">
+                      <span class="philo-deep-connection-label">Connexió amb el cas</span>
+                      <strong>L'algorisme falla el Principi de Diferència:</strong> els menys avantatjats del present són desplaçats per beneficiar una població futura estadística. Un disseny rawlsià exigiria que el corredor verd s'avalués <em>només si</em> els residents actuals també n'obtenen un benefici diferencial verificat (per exemple, prioritat absoluta en el reallotjament al nou parc verd, amb millora demostrada respecte al seu estat present).
+                    </div>
+                  </div>
+                </div>
+
+                <!-- HABERMAS & MARCUSE -->
+                <div class="philo-deep">
+                  <div class="philo-deep-header">
+                    <div class="philo-deep-portrait philo-deep-portrait-dual" aria-label="Jürgen Habermas i Herbert Marcuse">
+                      <img src="https://raw.githubusercontent.com/FernanESP0/Images-TAED/main/jurgen-habermas-florian-beier.webp" alt="Retrat de Jürgen Habermas" loading="lazy" referrerpolicy="no-referrer">
+                      <img src="https://raw.githubusercontent.com/FernanESP0/Images-TAED/main/herbert-marcuse-wide_webp.webp" alt="Retrat de Herbert Marcuse" loading="lazy" referrerpolicy="no-referrer">
+                    </div>
+                    <div class="philo-deep-meta">
+                      <div class="philo-deep-name">Jürgen Habermas &amp; Herbert Marcuse</div>
+                      <span class="philo-deep-dates">Habermas: 1929– · Frankfurt / Marcuse: 1898–1979 · UCSD</span>
+                      <span class="philo-deep-school">Escola de Frankfurt · Teoria crítica · Raó comunicativa</span>
+                    </div>
+                  </div>
+                  <div class="philo-deep-quote">«La raó instrumental converteix tota qüestió de fins en una qüestió de mitjans, i tota qüestió de valor en una qüestió de càlcul.» — Adorno &amp; Horkheimer, paràfrasi de la Dialèctica de la Il·lustració</div>
+                  <div class="philo-deep-body">
+                    <span class="philo-deep-concept">Concepte central · Crítica a la <strong>raó instrumental</strong> i defensa de la <strong>raó comunicativa</strong></span>
+                    <p class="philo-deep-text">L'Escola de Frankfurt distingeix dos modes de racionalitat: la <em>instrumental</em> calcula els mitjans més eficients per assolir un fi donat (és la racionalitat de qualsevol pipeline de ML), i la <em>comunicativa</em> delibera sobre quins fins són legítims (és la racionalitat de l'àgora democràtica). El perill modern, sostenen Habermas i Marcuse, és la <strong>tecnocràcia</strong>: convertir progressivament les decisions polítiques en problemes tècnics, fins que la pròpia possibilitat de deliberació queda colonitzada per la lògica de l'optimització.</p>
+                    <p class="philo-deep-text">Aplicada al Conseller-IA: la qüestió «<em>val la pena enderrocar el barri X per protegir 60 000 residents futurs?</em>» NO és tècnica. És una qüestió de prioritats col·lectives, valors no commensurables i identitat compartida. Reformulada com «<em>quin vector de pesos optimitza la pèrdua agregada?</em>», la qüestió perd la seva dimensió política i adopta l'aparença d'una resposta unívoca, quan en realitat la resposta és l'elecció dels pesos.</p>
+                    <div class="philo-deep-connection">
+                      <span class="philo-deep-connection-label">Connexió amb el cas</span>
+                      <strong>La frontera de Pareto és un mirall:</strong> reflecteix el sistema de pesos que li donem. La decisió real no és «quin punt de la frontera triem» sinó «<em>qui decideix els pesos</em>». La raó comunicativa exigeix que aquesta segona pregunta es contesti en seu democràtica deliberativa, no com a hiperparàmetre del codi.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="case-diagram">
+                  <span class="case-diagram-title">Diagrama · Conflicte de temporalitats i agents implicats</span>
+                  <svg viewBox="0 0 680 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px">
+                    <line x1="60" y1="120" x2="620" y2="120" stroke="#9b9ba8" stroke-width="1"/>
+                    <text x="60" y="105" font-family="'DM Mono',monospace" font-size="9" fill="#3a3a44">t = 0</text>
+                    <text x="620" y="105" font-family="'DM Mono',monospace" font-size="9" fill="#3a3a44" text-anchor="end">t = 2050</text>
+                    <text x="60" y="140" font-family="'DM Mono',monospace" font-size="8" fill="#9b9ba8" letter-spacing=".1em">PRESENT</text>
+                    <text x="620" y="140" font-family="'DM Mono',monospace" font-size="8" fill="#9b9ba8" letter-spacing=".1em" text-anchor="end">FUTUR</text>
+                    <circle cx="120" cy="120" r="30" fill="#fcebeb" stroke="#a32d2d" stroke-width="1.5"/>
+                    <text x="120" y="117" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="10" fill="#a32d2d" font-weight="500">1 200</text>
+                    <text x="120" y="130" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="9" fill="#a32d2d">habitatges</text>
+                    <text x="120" y="170" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#a32d2d" letter-spacing=".1em">VULNERABLES IDENTIFICATS</text>
+                    <text x="120" y="183" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="9" fill="#a32d2d">Rawls: protegits</text>
+                    <circle cx="560" cy="120" r="40" fill="#e1f5ee" stroke="#0f6e56" stroke-width="1.5"/>
+                    <text x="560" y="117" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="10" fill="#0f6e56" font-weight="500">60 000</text>
+                    <text x="560" y="130" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="9" fill="#0f6e56">residents</text>
+                    <text x="560" y="180" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#0f6e56" letter-spacing=".1em">ESTADÍSTICS FUTURS</text>
+                    <text x="560" y="193" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="9" fill="#0f6e56">Jonas: protegits</text>
+                    <line x1="150" y1="120" x2="520" y2="120" stroke="#854f0b" stroke-width="2" stroke-dasharray="6,4"/>
+                    <text x="340" y="108" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#854f0b" font-weight="500">Tradeoff temporal</text>
+                    <text x="340" y="138" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#854f0b" letter-spacing=".05em">ℒ = α·Desplaçament − β·Habitabilitat</text>
+                    <rect x="240" y="190" width="200" height="32" rx="3" fill="#0e0e12"/>
+                    <text x="340" y="206" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="rgba(125,184,232,.7)" letter-spacing=".15em">RAÓ COMUNICATIVA</text>
+                    <text x="340" y="218" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="9.5" fill="#f6f4ef">El pes (α, β) és una decisió democràtica</text>
+                  </svg>
+                </div>
+
+                <div class="argument-row">
+                  <div class="arg-col pro">
+                    <span class="arg-header">A favor — Permanència, Responsabilitat, Adaptació</span>
+                    <ul class="arg-list">
+                      <li>Si no actuem ara, l'illa de calor projectada fa el barri inhabitable per a tothom el 2050: l'enderroc és una forma d'auto-conservació col·lectiva.</li>
+                      <li>El cost de no actuar es propaga a totes les generacions futures; el d'actuar es concentra en una població compensable.</li>
+                      <li>Imperatiu de Jonas: el dany irreversible té pes infinit en la funció objectiu. L'algorisme tradueix matemàticament aquest imperatiu moral.</li>
+                      <li>Llei 16/2017 del Canvi Climàtic obliga la Generalitat a actuar amb diligència sobre objectius d'adaptació amb horitzó 2050.</li>
+                    </ul>
+                  </div>
+                  <div class="arg-col con">
+                    <span class="arg-header">En contra — Diferència, Identitat, Deliberació</span>
+                    <ul class="arg-list">
+                      <li>Principi de Diferència (Rawls): la decisió empitjora la situació dels més vulnerables presents sense beneficiar-los directament.</li>
+                      <li>Crítica a la raó instrumental (Frankfurt): la qüestió no és tècnica; convertir-la en optimització despolititza una decisió fonamentalment democràtica.</li>
+                      <li>Els beneficiaris futurs són una abstracció estadística sense veu; els afectats presents són persones concretes amb dret a ser escoltades (audiència, due process).</li>
+                      <li>El barri té valor immaterial (xarxa veïnal, memòria, identitat) que cap funció de pèrdua pot quantificar — la cura (Tronto) torna a actuar.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="case-consensus"><strong>Proposta de consens:</strong> quan l'horitzó d'optimització supera els 10 anys, la població afectada se solapa amb una categoria de vulnerabilitat protegida, i el front de Pareto no té solució dominant sota com a mínim dues ponderacions ètiques, el sistema ha de <em>publicar l'espai d'objectius complet</em> (guany d'adaptació, cost de desplaçament, impacte de vulnerabilitat social, utilitat descomptada sota múltiples pesos temporals) i <strong>aturar-se</strong>. L'elecció del vector de pesos (α, β) es re-encamina a l'òrgan deliberatiu corresponent (Ple de la Generalitat o consulta vinculant), no a la comissió tècnica. El Conseller-IA aporta la transparència del <em>tradeoff</em>, mai l'elecció del <em>tradeoff</em>.</div>
+              </div>
+            </div>
+
+          </div><!-- /subcase-index -->
+        </div><!-- /case-body (outer Case 1) -->
+      </div><!-- /case-study #case1 (outer) -->
+
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <!-- ═══ CAS 2 — Optimització multi-objectiu en habitatge d'emergència ═ -->
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <div class="case-study" id="case2">
+        <div class="case-header" onclick="toggleCase('case2')">
+          <div>
+            <div class="case-tag-row">
+              <span class="case-tag tag-legalitat">NSGA-II</span>
+              <span class="case-tag tag-comunitat">Habitatge d'emergència</span>
+              <span class="case-tag tag-algorisme">Frontera de Pareto</span>
+            </div>
+            <div class="case-title">Cas 2 — Optimització multi-objectiu: Habitatge d'urgència vs. Sostenibilitat</div>
+          </div>
+          <span class="case-chevron">▾</span>
+        </div>
+        <div class="case-body">
+          <p class="case-context">El subsistema d'<em>Assignació d'Habitatge i Resposta d'Emergència</em> ha de resoldre, davant d'un increment del 32 % en sol·licituds del Registre de Sol·licitants d'Habitatge, un problema d'optimització multi-objectiu canònic: maximitzar la velocitat de construcció i el nombre d'unitats lliurades, minimitzant simultàniament l'impacte climàtic agregat. Les variables de decisió són: <em>N</em> (nombre d'unitats), <em>τ</em> (mesos fins a entrega), <em>tipologia</em> (formigó armat ↔ panell prefabricat ↔ <em>passive house</em> de fusta laminada), i <em>impacte CO₂-eq</em> per unitat. NSGA-II retorna una frontera de Pareto amb dos extrems clarament definits:</p>
+          <p class="case-question"><strong>Pregunta central:</strong> Com pot un algorisme honest triar entre dos òptims no commensurables sense imposar implícitament una jerarquia política de valors? La frontera de Pareto és matemàticament correcta — i èticament insuficient.</p>
+
+          <div class="case-diagram">
+            <span class="case-diagram-title">Frontera de Pareto · Habitatge d'emergència vs. Cost climàtic</span>
+            <svg viewBox="0 0 660 290" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:660px">
+              <line x1="70" y1="240" x2="620" y2="240" stroke="#3a3a44" stroke-width="1"/>
+              <line x1="70" y1="240" x2="70" y2="30" stroke="#3a3a44" stroke-width="1"/>
+              <text x="345" y="270" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#3a3a44" letter-spacing=".1em">Emissions CO₂-eq (t/any) →</text>
+              <text x="40" y="135" font-family="'DM Mono',monospace" font-size="10" fill="#3a3a44" letter-spacing=".1em" transform="rotate(-90,40,135)">Unitats lliurades →</text>
+              <path d="M 130 80 Q 220 100 320 140 T 540 220" fill="none" stroke="#1b3f6e" stroke-width="2" stroke-dasharray="4,3"/>
+              <circle cx="130" cy="80" r="9" fill="#a32d2d" stroke="#fff" stroke-width="2"/>
+              <text x="150" y="76" font-family="'DM Sans',sans-serif" font-size="11" fill="#a32d2d" font-weight="500">A · Housing First</text>
+              <text x="150" y="90" font-family="'DM Mono',monospace" font-size="9" fill="#a32d2d">5 000 u · 12 mesos · +8 % CO₂</text>
+              <circle cx="320" cy="140" r="9" fill="#854f0b" stroke="#fff" stroke-width="2"/>
+              <text x="340" y="135" font-family="'DM Sans',sans-serif" font-size="11" fill="#854f0b" font-weight="500">M · Híbrid</text>
+              <text x="340" y="149" font-family="'DM Mono',monospace" font-size="9" fill="#854f0b">3 200 u · 18 mesos · +2 % CO₂</text>
+              <circle cx="540" cy="220" r="9" fill="#0f6e56" stroke="#fff" stroke-width="2"/>
+              <text x="380" y="215" font-family="'DM Sans',sans-serif" font-size="11" fill="#0f6e56" font-weight="500">B · Sustainability First</text>
+              <text x="380" y="229" font-family="'DM Mono',monospace" font-size="9" fill="#0f6e56">2 000 u · 24 mesos · neutre</text>
+              <text x="345" y="20" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#9b9ba8" letter-spacing=".12em">FRONTERA DE PARETO · NSGA-II</text>
+            </svg>
+          </div>
+
+          <span class="philos-section-label">Marc teòric · Optimització honesta i el seu límit</span>
+
+          <div class="philo-deep">
+            <div class="philo-deep-header">
+              <div class="philo-deep-portrait philo-deep-portrait-diagram" aria-label="Diagrama NSGA-II i la frontera de Pareto">
+                <img src="https://raw.githubusercontent.com/FernanESP0/Images-TAED/main/NSGA-II%20i%20la%20frontera%20de%20Pareto.png" alt="Diagrama NSGA-II i la frontera de Pareto" loading="lazy" referrerpolicy="no-referrer">
+              </div>
+              <div class="philo-deep-meta">
+                <div class="philo-deep-name">L'algoritme honest · NSGA-II i la frontera de Pareto</div>
+                <span class="philo-deep-dates">Deb et al. (2002) · IEEE Trans. Evol. Comput.</span>
+                <span class="philo-deep-school">Optimització multi-objectiu · Frontera no dominada</span>
+              </div>
+            </div>
+            <div class="philo-deep-quote">«Quan no existeix una solució dominant, qualsevol elecció a la frontera de Pareto és matemàticament òptima i èticament arbitrària.» — Resum operatiu del problema multi-objectiu</div>
+            <div class="philo-deep-body">
+              <span class="philo-deep-concept">Concepte central · No-dominància i el límit del càlcul</span>
+              <p class="philo-deep-text">Una solució <em>domina</em> una altra si és millor o igual en tots els objectius i estrictament millor en almenys un. La <strong>frontera de Pareto</strong> és el conjunt de solucions no dominades. Al cas que ens ocupa, A i B són ambdues a la frontera: cap supera l'altra en tots els objectius. La «millor» solució no existeix; només la <em>preferida</em> sota un vector de pesos.</p>
+              <p class="philo-deep-text">L'algorisme honest ho admet i delega l'elecció. El deshonest fixa silenciosament els pesos a la fase d'entrenament i presenta la sortida com a «recomanació tècnica». En el Conseller-IA, aquest segon escenari és inacceptable: el pes assignat al cost climàtic davant del cost social <em>és</em> la decisió política central.</p>
+              <div class="philo-deep-grid">
+                <div class="philo-deep-block">
+                  <span class="philo-deep-block-label">Solució A · «Housing First»</span>
+                  <p class="philo-deep-block-text">5 000 unitats de formigó armat, lliurament en 12 mesos, +8 % d'emissions del sector. Maximitza la velocitat i el volum: domina B sobre l'eix social.</p>
+                </div>
+                <div class="philo-deep-block">
+                  <span class="philo-deep-block-label">Solució B · «Sustainability First»</span>
+                  <p class="philo-deep-block-text">2 000 unitats de fusta laminada en estàndard passive-house, lliurament en 24 mesos, balanç de carboni neutre o negatiu. Domina A sobre l'eix climàtic; deixa 3 000 famílies sense sostre durant 12 mesos addicionals.</p>
+                </div>
+              </div>
+              <div class="philo-deep-connection">
+                <span class="philo-deep-connection-label">Connexió amb el cas</span>
+                <strong>Triar entre A i B exigeix un pes (α, β) que NO és tècnic:</strong> és la traducció numèrica d'una pregunta política — «quin valor moral relatiu té el dret immediat al sostre dels ciutadans presents davant el deute climàtic que imposem a les generacions futures?». El Conseller-IA ha de presentar la frontera completa, no preferir-ne un punt. La phronesis política torna a actuar com a complement de la sophia algorítmica.
+              </div>
+            </div>
+          </div>
+
+          <div class="argument-row">
+            <div class="arg-col pro">
+              <span class="arg-header">A favor de «Housing First» (A) — Urgència, Vulnerabilitat present</span>
+              <ul class="arg-list">
+                <li>3 000 famílies addicionals lliurades en 12 mesos: reducció estimada d'un 24 % en peticions a serveis d'emergència residencial.</li>
+                <li>Principi rawlsià: els menys avantatjats actuals (sense-sostre) reben benefici directe i mesurable.</li>
+                <li>El cost climàtic addicional (+8 %) és parcialment compensable amb captura de carboni i compensacions sectorials.</li>
+                <li>Cura (Tronto): el dany de viure al carrer és real, immediat i quantificable; el dany climàtic és diferit i distribuït.</li>
+              </ul>
+            </div>
+            <div class="arg-col con">
+              <span class="arg-header">A favor de «Sustainability First» (B) — Permanència, Responsabilitat futura</span>
+              <ul class="arg-list">
+                <li>Imperatiu de Jonas: l'increment d'emissions és incompatible amb la permanència d'una vida humana autèntica al territori.</li>
+                <li>Llei 16/2017 del Canvi Climàtic: el sector de la construcció ja contribueix el 30 % de les emissions; un +8 % addicional és políticament regressiu.</li>
+                <li>El deute climàtic és <em>no negociable</em> amb generacions futures que no han signat el contracte (Rawls: extensió intergeneracional).</li>
+                <li>La sostenibilitat del parc residencial és tan urgent com la seva disponibilitat: un habitatge construït avui que cremarà demà no és habitatge.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="case-consensus"><strong>Proposta de consens:</strong> el Conseller-IA <em>no</em> ha d'emetre una recomanació binària A/B. La seva sortida obligatòria és la <strong>visualització completa de la frontera de Pareto</strong> amb tots els tradeoffs explícits (unitats lliurades, temps, emissions, impacte de vulnerabilitat social desagregat per quintil de renda), més una <strong>tercera opció híbrida M</strong> (~3 200 unitats, 18 mesos, +2 % CO₂) que actua de <em>baseline</em> per al debat. L'elecció final del punt operatiu es delega a un òrgan democràtic responsable. <em>L'algorisme presenta el problema amb tota la seva complexitat; els humans escullen quina cara del dilema viuran.</em></div>
         </div>
       </div>
 
@@ -2244,7 +2566,7 @@ if(document.readyState === 'loading'){
 /* ─── NAV ACTIVE STATE + parent-dropdown highlighting ─── */
 const navLinks = document.querySelectorAll('.nav-link, .nav-dropdown-item');
 const navContainer = document.getElementById('topNav');
-const sectionIds = ['summary','p1','p2','p3','p4','sovereignty','case1','case2','case3','survey','ecosystem','refs','ai-use'];
+const sectionIds = ['summary','p1','p2','p3','p4','sovereignty','case1','case1a','case1b','case1c','case2','case3','survey','ecosystem','refs','ai-use'];
 const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 const navOffset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--topnav-h')) || 68;
 
@@ -2352,8 +2674,57 @@ function selectValue(idx) {
 
 /* ─── CASE ACCORDIONS ─── */
 function toggleCase(id) {
-  document.getElementById(id).classList.toggle('open');
+  const el = document.getElementById(id);
+  if(!el) return;
+  el.classList.toggle('open');
 }
+
+/* ─── DEEP LINKING · open parent Case 1 when navigating to a subcase ───
+   When a user clicks a nav link or anchor to #case1a, #case1b, or #case1c,
+   auto-expand the outer Case 1 first, then expand the targeted subcase,
+   then scroll into view smoothly. */
+(function(){
+  const SUBCASES = ['case1a','case1b','case1c'];
+  function openSubcaseChain(id){
+    if(!SUBCASES.includes(id)) return false;
+    const parent = document.getElementById('case1');
+    const child  = document.getElementById(id);
+    // Force the parent section visible (the IntersectionObserver may not fire
+    // in time for a deep-link landing inside a section taller than the viewport)
+    const section = document.getElementById('cases');
+    if(section){
+      section.classList.add('is-visible');
+      section.classList.remove('is-leaving');
+    }
+    if(parent) parent.classList.add('open');
+    if(child)  child.classList.add('open');
+    // Defer scroll until after layout settles
+    requestAnimationFrame(() => {
+      if(child) child.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+    return true;
+  }
+  // Intercept anchor clicks that target subcase IDs
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#case1"]');
+    if(!a) return;
+    const id = a.getAttribute('href').slice(1);
+    if(SUBCASES.includes(id)){
+      e.preventDefault();
+      openSubcaseChain(id);
+      // Update URL hash without re-triggering scroll
+      history.replaceState(null, '', '#'+id);
+    } else if(id === 'case1'){
+      // Top-level Case 1 link: ensure outer is open, do not auto-open subcases
+      const parent = document.getElementById('case1');
+      if(parent) parent.classList.add('open');
+    }
+  });
+  // Handle direct URL with hash on page load (e.g. someone shares ...#case1c)
+  if(window.location.hash && SUBCASES.includes(window.location.hash.slice(1))){
+    window.addEventListener('load', () => openSubcaseChain(window.location.hash.slice(1)));
+  }
+})();
 
 /* ─── PORTRAIT IMAGE GRACEFUL FALLBACK ───
    If a Wikipedia Commons portrait fails to load (rare network conditions / region blocks),
@@ -2543,8 +2914,12 @@ function toggleCase(id) {
       }
     });
   },{
-    threshold: 0.08,
-    rootMargin: '0px 0px -8% 0px'
+    // threshold:0 ensures the observer fires on ANY pixel intersection.
+    // Previously used 0.08, which is unreachable for sections taller than
+    // ~12× the viewport height (e.g. the long "Casos d'estudi" accordion)
+    // because the maximum intersection ratio = viewportHeight / sectionHeight.
+    threshold: 0,
+    rootMargin: '0px 0px 0px 0px'
   });
   reveals.forEach(r => enterObserver.observe(r));
 })();
