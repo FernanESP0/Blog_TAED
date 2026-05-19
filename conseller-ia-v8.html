@@ -824,7 +824,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
 <nav class="sidebar" aria-label="Navegació principal">
   <div class="sidebar-brand">
     <span class="kicker">TAED1 · UPC · 2025–26</span>
-    <h1>Conseller-<em>IA</em> · Territori</h1>
+    <h1>Conseller-<em>IA</em> · Territori i Habitatge</h1>
   </div>
   <div class="sidebar-nav" id="topNav">
     <a class="nav-link active nav-link-solo" href="#summary"><span class="dot"></span>Resum</a>
@@ -2501,7 +2501,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
           <li class="ai-use-item" id="ai-gemini">
             <div class="ai-use-logo ai-use-logo-gemini" aria-hidden="true">G</div>
             <div class="ai-use-body">
-              <div class="ai-use-name">Google Gemini <span class="ai-use-version">(Gemini 2.5 Pro)</span></div>
+              <div class="ai-use-name">Google Gemini <span class="ai-use-version">(Gemini 3)</span></div>
               <div class="ai-use-purpose">Finalitat · Recerca, anàlisi i redacció acadèmica</div>
               <p class="ai-use-text">S'ha emprat Gemini com a assistent de recerca per <strong>localitzar i sintetitzar fonts normatives</strong> (DOGCs, EU AI Act, GDPR), <strong>aclarir conceptes filosòfics</strong> (phronesis, vel d'ignorància, Land Ethic), <strong>contrastar models tècnics d'IA</strong> (arquitectures Random Forest / GNN / NSGA-II / SHAP) i <strong>donar suport a la redacció</strong> de fragments de l'article TAED1. Tot el contingut generat ha estat verificat, contrastat amb les fonts originals i revisat críticament pels autors. Les decisions ètiques, les tesis centrals i la selecció d'arguments són integralment humanes.</p>
               <div class="ai-use-scope">
@@ -2517,7 +2517,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
           <li class="ai-use-item" id="ai-claude">
             <div class="ai-use-logo ai-use-logo-claude" aria-hidden="true">C</div>
             <div class="ai-use-body">
-              <div class="ai-use-name">Anthropic Claude <span class="ai-use-version">(Claude Sonnet 4.5)</span></div>
+              <div class="ai-use-name">Anthropic Claude <span class="ai-use-version">(Claude Opus 4.7)</span></div>
               <div class="ai-use-purpose">Finalitat · Disseny web, maquetació i programació front-end</div>
               <p class="ai-use-text">S'ha emprat Claude com a assistent de <strong>disseny i programació web</strong> per a la implementació d'aquesta plataforma acadèmica: arquitectura HTML semàntica, sistema tipogràfic (Cormorant Garamond + DM Sans + DM Mono), paleta cromàtica institucional, <strong>animacions d'<em>scroll-reveal</em></strong> via IntersectionObserver, <strong>navegació superior sticky amb desplegables</strong>, integració d'imatges i fitxes filosòfiques, <strong>diagrames SVG dels casos d'estudi</strong>, tooltips conceptuals i el sistema de cites enllaçades. Tots els continguts teòrics, anàlisis i casos d'estudi són d'autoria humana; l'IA ha actuat exclusivament com a eina de <em>front-end engineering</em>.</p>
               <div class="ai-use-scope">
@@ -2682,9 +2682,9 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
 </div><!-- /content-wrap -->
 
 <footer class="footer">
-  Conseller-IA · Conselleria de Territori i Habitatge · Generalitat de Catalunya<br>
+  Conseller-IA · Anàlisi hipotètica del subsistema Territori i Habitatge<br>
   TAED1 · Universitat Politècnica de Catalunya · Curs 2025–26<br>
-  <span style="opacity:.4">Marc teòric elaborat amb el suport del marc de Begoña Román (UB) i el Reglament EU AI Act (2024/1689)</span>
+  <span style="color:rgba(246,244,239,.78);font-weight:500">Marc teòric elaborat amb el suport del marc de Begoña Román (UB) i el Reglament EU AI Act (2024/1689)</span>
 </footer>
 
 </main>
@@ -2769,26 +2769,115 @@ if(document.readyState === 'loading'){
 /* ─── NAV ACTIVE STATE + parent-dropdown highlighting ─── */
 const navLinks = document.querySelectorAll('.nav-link, .nav-dropdown-item');
 const navContainer = document.getElementById('topNav');
-const sectionIds = ['summary','p1','p2','p3','p4','sovereignty','case1','case1a','case1b','case1c','case2','case3','survey','ecosystem','refs','ai-use'];
+/* ───────────────────────────────────────────────────────────────────────────
+   SCROLL-SPY · Geometric containment algorithm (v2)
+
+   Bug fixed in this version
+   ─────────────────────────
+   The old algorithm assumed sectionIds order matched DOM order and used
+   "last in array order whose top is above trigger" → broke for sections
+   whose DOM position diverges from nav grouping (e.g. #co2-report sits
+   between #p4 and #sovereignty in the DOM, but conceptually belongs to
+   the Marc Teòric materiality discussion; #survey sits BEFORE #cases in
+   the DOM but belongs to the Resultats group).
+
+   New algorithm (geometry-driven, immune to DOM/array order mismatches)
+   ───────────────────────────────────────────────────────────────────────
+   1. Build a single trigger line ~100 px below the sticky top-nav.
+   2. PRIMARY PASS — find every section currently CONTAINING the trigger
+      (sectionTop ≤ triggerY < sectionBottom). Among those, pick the one
+      whose top is CLOSEST to the trigger from above (smallest distance).
+      → handles nested accordions naturally (#case1 wins over #cases when
+        both contain trigger; the innermost / most recently entered).
+   3. FALLBACK PASS — if no section contains the trigger (user is in a
+      vertical gutter between sections), pick the section whose top is the
+      most recent (largest top ≤ triggerY). Keeps the previous group
+      highlighted during scroll transitions.
+   4. FINAL FALLBACK — if absolutely nothing matches, default to summary.
+
+   Hidden anchors guard
+   ────────────────────
+   .case-study.subcase elements (#case1a, #case1b, #case1c) live inside
+   a collapsed accordion (display:none) most of the time. offsetParent
+   returns null in that state, so we skip them — otherwise their
+   getBoundingClientRect() returns zero values and they steal the active
+   state from real sections.
+*/
+const sectionIds = [
+  'summary',
+  'p1','p2','p3','p4',
+  'co2-report',
+  'sovereignty',
+  'survey',
+  'cases','case1','case1a','case1b','case1c','case2','case3',
+  'ecosystem',
+  'refs',
+  'ai-use'
+];
 const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 const navOffset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--topnav-h')) || 68;
 
+// Section IDs that don't have a direct <a> in the nav get mapped here.
+// CO₂ report is conceptually the empirical continuation of Pillar 4 (materialitat) →
+// it inherits the "Marc Teòric" highlight while the user reads it.
+const SECTION_TO_DROPDOWN = {
+  'cases'      : 'cases',     // «Casos d'estudi» heading area
+  'co2-report' : 'theory'     // CO₂ study extends Pillar 4 materiality
+};
+
 function updateNav(){
-  let active = sections[0];
-  const scrollY = window.scrollY + navOffset + 80;
+  const triggerY = window.scrollY + navOffset + 100;
+  let active = null;
+  let bestDistance = Infinity;
+
+  // PRIMARY PASS · find the section currently crossing the trigger line
   for(const sec of sections){
-    if(sec && sec.getBoundingClientRect().top + window.scrollY <= scrollY) active = sec;
+    if(!sec) continue;
+    if(sec.offsetParent === null) continue;          // skip hidden subcases
+    const rect = sec.getBoundingClientRect();
+    const top    = rect.top + window.scrollY;
+    const bottom = top + rect.height;
+    if(top <= triggerY && bottom > triggerY){
+      const distance = triggerY - top;
+      if(distance < bestDistance){
+        bestDistance = distance;
+        active = sec;
+      }
+    }
   }
+
+  // FALLBACK PASS · if nothing contains the trigger right now (we're between
+  // sections in a vertical gutter), pick the most recent scrolled-past section
+  if(!active){
+    let mostRecentTop = -Infinity;
+    for(const sec of sections){
+      if(!sec) continue;
+      if(sec.offsetParent === null) continue;
+      const top = sec.getBoundingClientRect().top + window.scrollY;
+      if(top <= triggerY && top > mostRecentTop){
+        mostRecentTop = top;
+        active = sec;
+      }
+    }
+  }
+
+  if(!active) active = sections[0];                  // very top of page
   if(!active) return;
+
   const activeId = '#' + active.id;
   navLinks.forEach(l => {
     const href = l.getAttribute('href') || '';
     l.classList.toggle('active', href === activeId);
   });
-  // Highlight the parent dropdown if one of its items is active
+
+  // Highlight the parent dropdown when either
+  //   (a) it contains an active nav-dropdown-item, OR
+  //   (b) the active section is a "wrapper" mapped via SECTION_TO_DROPDOWN
+  const wrapperDropdown = SECTION_TO_DROPDOWN[active.id] || null;
   document.querySelectorAll('.nav-dropdown').forEach(d => {
-    const hasActive = d.querySelector('.nav-dropdown-item.active') !== null;
-    d.classList.toggle('has-active', hasActive);
+    const hasItemActive  = d.querySelector('.nav-dropdown-item.active') !== null;
+    const isWrapperOwner = wrapperDropdown && d.dataset.section === wrapperDropdown;
+    d.classList.toggle('has-active', hasItemActive || isWrapperOwner);
   });
 }
 window.addEventListener('scroll', updateNav, {passive:true});
