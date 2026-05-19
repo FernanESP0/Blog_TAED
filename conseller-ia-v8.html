@@ -940,6 +940,33 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
         </div>
       </div>
 
+      <!-- ══════ METRICS · Avaluació del rendiment, més enllà de l'Accuracy ══════ -->
+      <span class="section-label">Mètriques prioritàries · Avaluació del rendiment</span>
+      <h3 class="sub-sub-heading">Més enllà de l'Accuracy: tres eixos d'avaluació desagregada</h3>
+      <p class="body-text">En l'administració pública el cost d'un <em>fals positiu</em> i un <em>fals negatiu</em> és intrínsecament asimètric: un fals positiu genera molèsties administratives; un fals negatiu pot deixar una família al carrer. Per aquesta raó, el Conseller-IA <strong>descarta l'Accuracy global</strong> com a mètrica principal i prioritza tres eixos d'avaluació desagregada, cadascun amb un llindar de no-desplegament validat per auditoria externa anual.</p>
+
+      <div class="levels-grid">
+        <div class="level-card level-micro">
+          <span class="level-badge">Eix 1 · Predicció</span>
+          <div class="level-title">Rendiment predictiu i calibratge</div>
+          <p class="level-body"><strong>PR-AUC</strong> — Essencial per detectar amb èxit classes minoritàries crítiques (risc geològic, emergències residencials), on l'ROC-AUC sobrevalora el rendiment per desbalanceig.</p>
+          <p class="level-body"><strong>F1-Score ponderat per costos</strong> — Penalitza exponencialment els falsos negatius, prioritzant la protecció de persones vulnerables per sobre de l'eficiència burocràtica.</p>
+          <p class="level-body"><strong>ECE (Expected Calibration Error)</strong> — Assegura que la confiança de l'algorisme sigui estadísticament real. Pas previ obligatori per justificar qualsevol intervenció humana sobre la sortida.</p>
+        </div>
+        <div class="level-card level-meso">
+          <span class="level-badge">Eix 2 · Equitat</span>
+          <div class="level-title">Justícia algorítmica (Fairness)</div>
+          <p class="level-body"><strong>Disparate Impact Ratio (DIR)</strong> — Cap model passa a producció si no manté la ràtio de decisions favorables entre grups demogràfics dins l'interval recomanat (<code style="font-family:var(--mono);background:var(--bg-2);padding:1px 6px;border-radius:3px;font-size:.92em">0,8 – 1,25</code>).</p>
+          <p class="level-body"><strong>Equal Opportunity Difference (EOD)</strong> — Garanteix que la taxa d'encert sigui invariant entre barris i comarques, evitant el perfilat geogràfic implícit en els models entrenats sobre dades históriques.</p>
+        </div>
+        <div class="level-card level-macro">
+          <span class="level-badge">Eix 3 · Materialitat</span>
+          <div class="level-title">Operació sostenible</div>
+          <p class="level-body"><strong>WUE i PUE</strong> — Monitorització contínua del consum d'aigua i energia del centre de processament. Actuen com a mecanisme d'aturada automàtica de tasques no-crítiques durant les fases de sequera declarades per l'ACA.</p>
+          <p class="level-body"><strong>Carbon-per-Inference</strong> — Grams de CO₂ per cada predicció emesa. Si se supera el pressupost ecològic mensual, el sistema aplica restriccions a les tasques de baixa prioritat fins al següent cicle de tarifa.</p>
+        </div>
+      </div>
+
       <span class="section-label">Explicabilitat per subsistema</span>
       <p class="body-text">Els models amb major rendiment predictiu (xarxes profundes, ensembles grans) produeixen precisament les fronteres de decisió més opaques. Aquesta tensió no és opcional per a l'administració pública: és una restricció dura imposada per la responsabilitat democràtica.</p>
 
@@ -1193,6 +1220,129 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
       <h3 class="sub-sub-heading">Mitigació del biaix algorítmic</h3>
       <p class="body-text">Entrenar amb dades històriques de la Generalitat <strong>perpetua les desigualtats territorials del passat</strong>. Si el Conseller-IA assigna recursos basant-se en patrons d'inversió històrics, garanteix matemàticament la persistència de dèficits infraestructurals en àrees marginades, codificant la segregació històrica en models predictius futurs.</p>
       <p class="body-text">L'índex de vulnerabilitat social ha de construir-se amb una metodologia documentada i revisada per parells, amb auditories externes anuals. Les mètriques de rendiment (precisió, recall, taxa de falsos positius) s'han de calcular <em>desagregadament</em> per regió geogràfica, quintil de renda i tipologia familiar.</p>
+    </section>
+
+    <!-- ══════ CO₂ FOOTPRINT REPORT · Informe tècnic de sostenibilitat ══════ -->
+    <section id="co2-report" class="reveal" style="margin-top:4rem">
+      <span class="section-label">Informe tècnic · Petjada de carboni del sistema</span>
+      <h2 class="section-heading">Sostenibilitat operativa: el cost climàtic del Conseller-IA</h2>
+      <p class="section-sub">Quantificació exhaustiva de la petjada de CO₂ del sistema, des de la fabricació industrial fins a l'operació anual. Tots els càlculs apliquen el factor d'emissió del mix elèctric català fixat per l'<strong>Oficina Catalana del Canvi Climàtic (OCCC)</strong> en <code style="font-family:var(--mono);background:var(--bg-2);padding:1px 6px;border-radius:3px;font-size:.92em">0,283 kg CO₂eq/kWh</code>, incloent les emissions indirectes d'Abast 3 (fabricació de maquinari) i les operatives d'Abast 2 (consum elèctric).</p>
+
+      <p class="body-text">Tot i que les futures generacions de GPU prometen millores significatives d'eficiència energètica, apliquem com a hipòtesi conservadora el principi de la <em>Paradoxa de Jevons</em>: les millores tècniques generen un augment de l'escala dels càlculs governamentals, mantenint el requeriment energètic ancorat a la capacitat màxima de disseny de la instal·lació (<strong>25 MW</strong>). L'optimització, paradoxalment, no redueix el consum agregat — el reassigna a càrregues més ambicioses.</p>
+
+      <div class="stat-row" style="margin:2.25rem 0 1.5rem">
+        <div class="stat-card">
+          <div class="stat-value">1,01</div>
+          <span class="stat-unit">M kg CO₂eq · one-time</span>
+          <p class="stat-label">Petjada del desplegament inicial (fabricació + entrenament fundacional)</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">1,30</div>
+          <span class="stat-unit">M kg CO₂eq / any</span>
+          <p class="stat-label">Petjada operativa recurrent (inferència, manteniment, refrigeració, auditoria)</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">3,6</div>
+          <span class="stat-unit">Milions L H₂O / any</span>
+          <p class="stat-label">Aigua dolça evaporada per refrigeració del CPD (PUE 1.2)</p>
+        </div>
+      </div>
+
+      <!-- INITIAL DEPLOYMENT BREAKDOWN -->
+      <div class="framework-section">
+        <div class="framework-title">Entrenament i fabricació inicial · 1.011.448 kg CO₂eq</div>
+        <div class="framework-sub">Deute ecològic generat abans de tramitar el primer expedient ciutadà: manufactura industrial del clúster H100 més l'entrenament fundacional dels quatre subsistemes algorítmics.</div>
+        <table class="ethics-table">
+          <thead>
+            <tr>
+              <th>Vector d'emissió</th>
+              <th>Origen del càlcul</th>
+              <th>Emissions (CO₂eq)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fabricació de hardware físic</td>
+              <td>Manufactura de 64 nodes NVIDIA HGX H100 (cradle-to-gate, ~1.312 kg/placa) + matrius de xarxa, RAM i CPUs perifèriques.</td>
+              <td><span class="risk-pill risk-med">163.968 kg</span></td>
+            </tr>
+            <tr>
+              <td>Manufactura del Data Lake</td>
+              <td>Producció de memòria SSD d'alt rendiment per a 660 TB (~32 kg CO₂eq / TB de capacitat física).</td>
+              <td><span class="risk-pill risk-low">21.120 kg</span></td>
+            </tr>
+            <tr>
+              <td>Entrenament Subsistema 1 · Planificació Territorial</td>
+              <td>1.800 MWh per LLMs fundacionals sobre corpus legal + CNN per a ortofotografia ICGC × 283 kg/MWh.</td>
+              <td><span class="risk-pill risk-high">509.400 kg</span></td>
+            </tr>
+            <tr>
+              <td>Entrenament Subsistema 2 · Urbanisme</td>
+              <td>350 MWh per ajust de BERT-base (queixes veïnals) i GNNs per a segregació social urbana × 283 kg/MWh.</td>
+              <td><span class="risk-pill risk-med">99.050 kg</span></td>
+            </tr>
+            <tr>
+              <td>Entrenament Subsistemes 3 i 4 · Assignació + Mobilitat</td>
+              <td>770 MWh per agents de Reinforcement Learning en simuladors massius i fronts de Pareto NSGA-II × 283 kg/MWh.</td>
+              <td><span class="risk-pill risk-high">217.910 kg</span></td>
+            </tr>
+            <tr style="background:var(--bg)">
+              <td><strong>Petjada total del desplegament inicial</strong></td>
+              <td><strong>Suma acumulada (cost amortitzable)</strong></td>
+              <td><strong>1.011.448 kg</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ANNUAL OPERATION BREAKDOWN -->
+      <div class="framework-section">
+        <div class="framework-title">Operació anual · 1.303.336 kg CO₂eq / any</div>
+        <div class="framework-sub">Metabolisme energètic ininterromput: 3.600 MWh anuals de processament directe més els serveis paral·lels de dades, refrigeració estructural i auditoria humana de les decisions.</div>
+        <table class="ethics-table">
+          <thead>
+            <tr>
+              <th>Vector d'emissió</th>
+              <th>Origen del càlcul</th>
+              <th>Emissions (CO₂eq)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Inferència contínua i execució diària</td>
+              <td>2.160 MWh (60% del processament algorítmic) × 283 kg/MWh — IoT 5 GB/dia, sol·licituds ciutadanes, planejament en temps real.</td>
+              <td><span class="risk-pill risk-high">611.280 kg</span></td>
+            </tr>
+            <tr>
+              <td>Reentrenament constant (cicles de 72 h)</td>
+              <td>1.440 MWh (40% restant) × 283 kg/MWh — regeneració de pesos per mitigar la deriva socioeconòmica de l'IDESCAT.</td>
+              <td><span class="risk-pill risk-high">407.520 kg</span></td>
+            </tr>
+            <tr>
+              <td>Sostenibilitat del Data Lake (hot storage)</td>
+              <td>660 TB × 46,33 kWh/TB·any × 283 kg/MWh — lectura i reencriptació constant dels registres d'habitatge.</td>
+              <td><span class="risk-pill risk-low">8.651 kg</span></td>
+            </tr>
+            <tr>
+              <td>Flota d'auditoria (500 portàtils)</td>
+              <td>Amortització anual: ~144 kg CO₂eq / dispositiu (cicle de vida de 4 anys + hores d'ús per a auditar SHAP i atenció dels LLMs).</td>
+              <td><span class="risk-pill risk-low">72.125 kg</span></td>
+            </tr>
+            <tr>
+              <td>Refrigeració del CPD (PUE 1.2)</td>
+              <td>720 MWh (20% extra sobre clúster) × 283 kg/MWh — dissipació de TDP&gt;700 W per GPU H100 + <strong>3,6 M litres d'aigua/any</strong>.</td>
+              <td><span class="risk-pill risk-med">203.760 kg</span></td>
+            </tr>
+            <tr style="background:var(--bg)">
+              <td><strong>Petjada operativa total anual</strong></td>
+              <td><strong>Suma acumulada (cost recurrent)</strong></td>
+              <td><strong>1.303.336 kg</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="body-text" style="margin-top:1.75rem">Sumant la petjada del primer any d'operació (desplegament inicial + un any d'ús), l'agregat puja a <code style="font-family:var(--mono);background:var(--bg-2);padding:1px 6px;border-radius:3px;font-size:.92em">2.314.784 kg CO₂eq</code> — aproximadament les emissions anuals de <strong>500 famílies catalanes mitjanes</strong>. La justificació democràtica del Conseller-IA exigeix que aquesta externalitat es contrasti anualment contra el guany d'eficiència administrativa empíricament mesurable. Si l'estalvi de temps administratiu i la qualitat decisional acumulada no superen l'externalitat climàtica, el sistema s'ha de <em>redimensionar o desplegar parcialment</em>.</p>
     </section>
 
     <!-- ══════ MANIFESTO ══════ -->
