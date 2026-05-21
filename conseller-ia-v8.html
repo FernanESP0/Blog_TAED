@@ -9,7 +9,7 @@
 <meta name="description" content="Plataforma acadèmica del projecte Conseller-IA. Anàlisi ètica i tècnica de la integració de la IA a la Conselleria de Territori i Habitatge de la Generalitat de Catalunya.">
 <title>Conseller-IA · Territori i Habitatge · Plataforma Acadèmica</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<!-- Primary CDN: cdnjs (Cloudflare) — High uptime, CORS-enabled, HTTPS -->
+<!-- Primary CDN: cdnjs (Cloudflare) , High uptime, CORS-enabled, HTTPS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js" crossorigin="anonymous"></script>
 <!-- Resilient fallback: if Cloudflare CDN is blocked, fall back to jsDelivr (alternate CORS-compliant CDN) -->
@@ -46,7 +46,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.92;font-size:20.5px;overflow-x:hidden;padding-top:calc(var(--topnav-h) + var(--topnav-gap) * 2);position:relative}
-/* Dark band behind the floating nav — matches hero background so the area above the title reads as part of the dark header */
+/* Dark band behind the floating nav , matches hero background so the area above the title reads as part of the dark header */
 body::before{
   content:'';
   position:fixed;
@@ -102,7 +102,7 @@ body::before{
   overflow:visible; /* CRITICAL: must not clip dropdowns */
   position:relative;
 }
-.nav-group-label{display:none} /* legacy desktop labels — replaced by dropdowns */
+.nav-group-label{display:none} /* legacy desktop labels , replaced by dropdowns */
 .nav-link{
   display:inline-flex;
   align-items:center;
@@ -259,7 +259,7 @@ body::before{
   display:block;
 }
 .col-main{min-width:0;max-width:100%}
-/* marginalia column hidden in immersive layout — content already embedded in philo-deep cards */
+/* marginalia column hidden in immersive layout , content already embedded in philo-deep cards */
 .col-margin{display:none}
 
 /* marginalia */
@@ -281,7 +281,7 @@ body::before{
 .intro-block{font-family:var(--serif);font-size:1.6rem;font-weight:400;line-height:1.76;color:var(--ink-2);border-left:3px solid var(--accent);padding-left:2rem;margin-bottom:5rem}
 .body-text{font-size:1.22rem;color:var(--ink-2);line-height:1.92;margin-bottom:1.6rem}
 .body-text em{font-style:italic}
-/* PHASE 1 FIX · Strong de-bolded in body text — only headings/titles remain bold */
+/* PHASE 1 FIX · Strong de-bolded in body text , only headings/titles remain bold */
 /* Light-background contexts → de-bold + subtle underline + dark ink (good contrast on light bg) */
 .body-text strong,
 .case-context strong,
@@ -327,7 +327,7 @@ body::before{
 .sub-heading{font-family:var(--serif);font-size:2.1rem;font-weight:500;color:var(--ink);margin-bottom:1.3rem;line-height:1.2}
 .sub-sub-heading{font-family:var(--sans);font-size:1.15rem;font-weight:500;color:var(--ink);margin:2.25rem 0 1rem;letter-spacing:.01em}
 
-/* pillar header — v4 style, scaled up */
+/* pillar header , v4 style, scaled up */
 .pillar{margin-bottom:7rem;scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
 .pillar-header{display:flex;align-items:flex-start;gap:1.75rem;margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--bg-3)}
 .pillar-num{font-family:var(--serif);font-size:6.5rem;font-weight:400;line-height:1;color:var(--bg-3);flex-shrink:0;margin-top:-.5rem;letter-spacing:-.03em}
@@ -889,10 +889,10 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
 <!-- ═══ HERO ═══ -->
 <header class="hero">
   <div class="hero-inner">
-    <span class="kicker">TAED1 — Universitat Politècnica de Catalunya · Curs 2025–26</span>
+    <span class="kicker">TAED1 , Universitat Politècnica de Catalunya · Curs 2025–26</span>
     <h1>El Conseller-IA: Implicacions Ètiques i d'Enginyeria d'Automatitzar el <em>Territori i l'Habitatge</em></h1>
     <p class="authors"><strong>Ander Miranda · Pablo Fernández · Oriol Parent · Pau González</strong><br>Universitat Politècnica de Catalunya · Barcelona, Spain</p>
-    <p class="desc">¿Què passa quan un Random Forest amb confiança <span style="font-family:var(--mono);color:#7db8e8">p&nbsp;&gt;&nbsp;0.95</span> emet una ordre de desnonament? ¿Quan una optimització NSGA-II decideix la frontera de Pareto entre 3 000 famílies sense sostre i 8 % d'emissions de CO₂? Aquest blog disseca, des de l'enginyeria de dades, la materialitat algorítmica i la <em>moral exception problem</em> d'automatitzar la Conselleria de Territori — amb SHAP, GNNExplainer, RLHF, phronesis aristotèlica i 3 600 MWh/any de petjada computacional.</p>
+    <p class="desc">¿Què passa quan un Random Forest amb confiança <span style="font-family:var(--mono);color:#7db8e8">p&nbsp;&gt;&nbsp;0.95</span> emet una ordre de desnonament? ¿Quan una optimització NSGA-II decideix la frontera de Pareto entre 3 000 famílies sense sostre i 8 % d'emissions de CO₂? Aquest blog disseca, des de l'enginyeria de dades, la materialitat algorítmica i la <em>moral exception problem</em> d'automatitzar la Conselleria de Territori , amb SHAP, GNNExplainer, RLHF, phronesis aristotèlica i 3 600 MWh/any de petjada computacional.</p>
     <div class="hero-meta">
       <span class="hero-tag">EU AI Act 2024/1689</span>
       <span class="hero-tag">GDPR</span>
@@ -939,7 +939,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
         </div>
       </div>
 
-      <p class="body-text">Cap LLM resol per si sol la complexitat del territori. El Conseller-IA s'ha de dissenyar com un <em>sistema sociotècnic compost</em>: quatre subsistemes verticals (planificació, urbanisme, habitatge, mobilitat) amb pipelines independents, <em>feature stores</em> federats, i una capa d'orquestració que normalitza outputs heterogenis. Cada subsistema treballa amb un tensor d'entrada de naturalesa diferent —rasters geoespacials, sèries temporals IoT, grafs de connectivitat veïnal, registres tabulars xifrats— i exigeix una arquitectura model-específica. La temptació enginyerística d'<em>end-to-end deep learning</em> sobre tot el corpus no és només una mala decisió tècnica: és una mala decisió política, perquè col·lapsa decisions ètiques heterogènies en un sol vector de pesos no auditable.</p>
+      <p class="body-text">Cap LLM resol per si sol la complexitat del territori. El Conseller-IA s'ha de dissenyar com un <em>sistema sociotècnic compost</em>: quatre subsistemes verticals (planificació, urbanisme, habitatge, mobilitat) amb pipelines independents, <em>feature stores</em> federats, i una capa d'orquestració que normalitza outputs heterogenis. Cada subsistema treballa amb un tensor d'entrada de naturalesa diferent ,rasters geoespacials, sèries temporals IoT, grafs de connectivitat veïnal, registres tabulars xifrats, i exigeix una arquitectura model-específica. La temptació enginyerística d'<em>end-to-end deep learning</em> sobre tot el corpus no és només una mala decisió tècnica: és una mala decisió política, perquè col·lapsa decisions ètiques heterogènies en un sol vector de pesos no auditable.</p>
 
       <h3 class="sub-sub-heading">Subsistema 1 · Planificació territorial</h3>
       <p class="body-text">Combinació de <strong>Transformers (LLM)</strong> per a l'anàlisi de coherència normativa amb <strong>CNN</strong> per al processament d'imatges satèl·lit. La capa predictiva utilitza <strong>Gradient Boosting (XGBoost)</strong> per a classificació de risc geològic i d'inundabilitat. Ingereix mapes de vulnerabilitat de l'ICGC (raster 1m, ~90 TB), indicadors socioeconòmics de l'IDESCAT, sèries històriques del Servei de Vigilància de la Contaminació i registre cadastral (~150 TB).</p>
@@ -989,21 +989,21 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
         <div class="level-card level-micro">
           <span class="level-badge">Eix 1 · Predicció</span>
           <div class="level-title">Rendiment predictiu i calibratge</div>
-          <p class="level-body"><strong>PR-AUC</strong> — Essencial per detectar amb èxit classes minoritàries crítiques (risc geològic, emergències residencials), on l'ROC-AUC sobrevalora el rendiment per desbalanceig.</p>
-          <p class="level-body"><strong>F1-Score ponderat per costos</strong> — Penalitza exponencialment els falsos negatius, prioritzant la protecció de persones vulnerables per sobre de l'eficiència burocràtica.</p>
-          <p class="level-body"><strong>ECE (Expected Calibration Error)</strong> — Assegura que la confiança de l'algorisme sigui estadísticament real. Pas previ obligatori per justificar qualsevol intervenció humana sobre la sortida.</p>
+          <p class="level-body"><strong>PR-AUC</strong> , Essencial per detectar amb èxit classes minoritàries crítiques (risc geològic, emergències residencials), on l'ROC-AUC sobrevalora el rendiment per desbalanceig.</p>
+          <p class="level-body"><strong>F1-Score ponderat per costos</strong> , Penalitza exponencialment els falsos negatius, prioritzant la protecció de persones vulnerables per sobre de l'eficiència burocràtica.</p>
+          <p class="level-body"><strong>ECE (Expected Calibration Error)</strong> , Assegura que la confiança de l'algorisme sigui estadísticament real. Pas previ obligatori per justificar qualsevol intervenció humana sobre la sortida.</p>
         </div>
         <div class="level-card level-meso">
           <span class="level-badge">Eix 2 · Equitat</span>
           <div class="level-title">Justícia algorítmica (Fairness)</div>
-          <p class="level-body"><strong>Disparate Impact Ratio (DIR)</strong> — Cap model passa a producció si no manté la ràtio de decisions favorables entre grups demogràfics dins l'interval recomanat (<code style="font-family:var(--mono);background:var(--bg-2);padding:1px 6px;border-radius:3px;font-size:.92em">0,8 – 1,25</code>).</p>
-          <p class="level-body"><strong>Equal Opportunity Difference (EOD)</strong> — Garanteix que la taxa d'encert sigui invariant entre barris i comarques, evitant el perfilat geogràfic implícit en els models entrenats sobre dades históriques.</p>
+          <p class="level-body"><strong>Disparate Impact Ratio (DIR)</strong> , Cap model passa a producció si no manté la ràtio de decisions favorables entre grups demogràfics dins l'interval recomanat (<code style="font-family:var(--mono);background:var(--bg-2);padding:1px 6px;border-radius:3px;font-size:.92em">0,8 – 1,25</code>).</p>
+          <p class="level-body"><strong>Equal Opportunity Difference (EOD)</strong> , Garanteix que la taxa d'encert sigui invariant entre barris i comarques, evitant el perfilat geogràfic implícit en els models entrenats sobre dades históriques.</p>
         </div>
         <div class="level-card level-macro">
           <span class="level-badge">Eix 3 · Materialitat</span>
           <div class="level-title">Operació sostenible</div>
-          <p class="level-body"><strong>WUE i PUE</strong> — Monitorització contínua del consum d'aigua i energia del centre de processament. Actuen com a mecanisme d'aturada automàtica de tasques no-crítiques durant les fases de sequera declarades per l'ACA.</p>
-          <p class="level-body"><strong>Carbon-per-Inference</strong> — Grams de CO₂ per cada predicció emesa. Si se supera el pressupost ecològic mensual, el sistema aplica restriccions a les tasques de baixa prioritat fins al següent cicle de tarifa.</p>
+          <p class="level-body"><strong>WUE i PUE</strong> , Monitorització contínua del consum d'aigua i energia del centre de processament. Actuen com a mecanisme d'aturada automàtica de tasques no-crítiques durant les fases de sequera declarades per l'ACA.</p>
+          <p class="level-body"><strong>Carbon-per-Inference</strong> , Grams de CO₂ per cada predicció emesa. Si se supera el pressupost ecològic mensual, el sistema aplica restriccions a les tasques de baixa prioritat fins al següent cicle de tarifa.</p>
         </div>
       </div>
 
@@ -1067,7 +1067,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
 
       <div class="pull-quote">
         <p>La justícia ha de reconèixer la <em>interdependència</em>; l'algorisme ha de ser dissenyat per aturar-se quan la relació de cura es trenca.</p>
-        <cite>— Joan Tronto, <em>Moral Boundaries: A Political Argument for an Ethic of Care</em> (1993)</cite>
+        <cite>, Joan Tronto, <em>Moral Boundaries: A Political Argument for an Ethic of Care</em> (1993)</cite>
       </div>
 
       <span class="section-label">Els deu valors de Begoña Román · Matriu d'aplicació</span>
@@ -1090,7 +1090,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
       </div>
 
       <p class="body-text">
-        Quan un classificador desenvolupa una predicció, l'impacte no es propaga pel mateix canal. Una mateixa decisió algorítmica genera <em>efectes desagregables</em> en tres nivells d'anàlisi simultanis —individu, organització, sistema— i cadascun exigeix mètriques d'avaluació diferents (<em>per-decision SHAP</em> al micro, <em>automation bias rate</em> al meso, <em>disparate impact ratio</em> al macro). El marc incorpora la crítica empírica de <span class="tt"><span class="tt-trigger">Virginia Eubanks</span><span class="tt-box"><span class="tt-title">Virginia Eubanks · Automating Inequality (2018)</span>Estudia tres pipelines algorítmics de benestar social als EUA (Indiana, Allegheny, LA). Demostra empíricament que un sistema optimitzat per minimitzar <em>false positives</em> en frau converteix <em>false negatives</em> en frau real en mortalitat administrativa. La «neutralitat» algorítmica és una violència institucional reescrita en sintaxi Python.</span></span><a href="#r13" class="cite-link">[13]</a>: <em>l'objectivitat algorítmica és matemàticament neutra però socialment esbiaixada</em>, perquè el biaix viu al <em>training distribution</em>, no al model.
+        Quan un classificador desenvolupa una predicció, l'impacte no es propaga pel mateix canal. Una mateixa decisió algorítmica genera <em>efectes desagregables</em> en tres nivells d'anàlisi simultanis ,individu, organització, sistema, i cadascun exigeix mètriques d'avaluació diferents (<em>per-decision SHAP</em> al micro, <em>automation bias rate</em> al meso, <em>disparate impact ratio</em> al macro). El marc incorpora la crítica empírica de <span class="tt"><span class="tt-trigger">Virginia Eubanks</span><span class="tt-box"><span class="tt-title">Virginia Eubanks · Automating Inequality (2018)</span>Estudia tres pipelines algorítmics de benestar social als EUA (Indiana, Allegheny, LA). Demostra empíricament que un sistema optimitzat per minimitzar <em>false positives</em> en frau converteix <em>false negatives</em> en frau real en mortalitat administrativa. La «neutralitat» algorítmica és una violència institucional reescrita en sintaxi Python.</span></span><a href="#r13" class="cite-link">[13]</a>: <em>l'objectivitat algorítmica és matemàticament neutra però socialment esbiaixada</em>, perquè el biaix viu al <em>training distribution</em>, no al model.
       </p>
 
       <div class="levels-grid">
@@ -1232,7 +1232,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
       </div>
 
       <h3 class="sub-sub-heading">Consum hídric i Water Usage Effectiveness (WUE)</h3>
-      <p class="body-text">El TDP dels clústers GPU genera dissipació tèrmica gestionada amb torres de refrigeració evaporatives. En el context català —subjecte a emergències per sequera i protocols ACA— el consum d'aigua no és un mer cost operacional: és una <strong>restricció ètica</strong>.</p>
+      <p class="body-text">El TDP dels clústers GPU genera dissipació tèrmica gestionada amb torres de refrigeració evaporatives. En el context català ,subjecte a emergències per sequera i protocols ACA, el consum d'aigua no és un mer cost operacional: és una <strong>restricció ètica</strong>.</p>
 
       <div class="stat-row">
         <div class="stat-card"><div class="stat-val">2,9</div><span class="stat-unit">ML/any · Conservador</span><p class="stat-lbl">WUE 0,8 L/kWh · refrigeració òptima</p></div>
@@ -1268,7 +1268,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
       <h2 class="section-heading">Sostenibilitat operativa: el cost climàtic del Conseller-IA</h2>
       <p class="section-sub">Quantificació exhaustiva de la petjada de CO₂ del sistema, des de la fabricació industrial fins a l'operació anual. Tots els càlculs apliquen el factor d'emissió del mix elèctric català fixat per l'<strong>Oficina Catalana del Canvi Climàtic (OCCC)</strong> en <code style="font-family:var(--mono);background:var(--bg-2);padding:1px 6px;border-radius:3px;font-size:.92em">0,283 kg CO₂eq/kWh</code>, incloent les emissions indirectes d'Abast 3 (fabricació de maquinari) i les operatives d'Abast 2 (consum elèctric).</p>
 
-      <p class="body-text">Tot i que les futures generacions de GPU prometen millores significatives d'eficiència energètica, apliquem com a hipòtesi conservadora el principi de la <em>Paradoxa de Jevons</em>: les millores tècniques generen un augment de l'escala dels càlculs governamentals, mantenint el requeriment energètic ancorat a la capacitat màxima de disseny de la instal·lació (<strong>25 MW</strong>). L'optimització, paradoxalment, no redueix el consum agregat — el reassigna a càrregues més ambicioses.</p>
+      <p class="body-text">Tot i que les futures generacions de GPU prometen millores significatives d'eficiència energètica, apliquem com a hipòtesi conservadora el principi de la <em>Paradoxa de Jevons</em>: les millores tècniques generen un augment de l'escala dels càlculs governamentals, mantenint el requeriment energètic ancorat a la capacitat màxima de disseny de la instal·lació (<strong>25 MW</strong>). L'optimització, paradoxalment, no redueix el consum agregat , el reassigna a càrregues més ambicioses.</p>
 
       <div class="stat-row" style="margin:2.25rem 0 1.5rem">
         <div class="stat-card">
@@ -1350,17 +1350,17 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
           <tbody>
             <tr>
               <td>Inferència contínua i execució diària</td>
-              <td>2.160 MWh (60% del processament algorítmic) × 283 kg/MWh — IoT 5 GB/dia, sol·licituds ciutadanes, planejament en temps real.</td>
+              <td>2.160 MWh (60% del processament algorítmic) × 283 kg/MWh , IoT 5 GB/dia, sol·licituds ciutadanes, planejament en temps real.</td>
               <td><span class="risk-pill risk-high">611.280 kg</span></td>
             </tr>
             <tr>
               <td>Reentrenament constant (cicles de 72 h)</td>
-              <td>1.440 MWh (40% restant) × 283 kg/MWh — regeneració de pesos per mitigar la deriva socioeconòmica de l'IDESCAT.</td>
+              <td>1.440 MWh (40% restant) × 283 kg/MWh , regeneració de pesos per mitigar la deriva socioeconòmica de l'IDESCAT.</td>
               <td><span class="risk-pill risk-high">407.520 kg</span></td>
             </tr>
             <tr>
               <td>Sostenibilitat del Data Lake (hot storage)</td>
-              <td>660 TB × 46,33 kWh/TB·any × 283 kg/MWh — lectura i reencriptació constant dels registres d'habitatge.</td>
+              <td>660 TB × 46,33 kWh/TB·any × 283 kg/MWh , lectura i reencriptació constant dels registres d'habitatge.</td>
               <td><span class="risk-pill risk-low">8.651 kg</span></td>
             </tr>
             <tr>
@@ -1370,7 +1370,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
             </tr>
             <tr>
               <td>Refrigeració del CPD (PUE 1.2)</td>
-              <td>720 MWh (20% extra sobre clúster) × 283 kg/MWh — dissipació de TDP&gt;700 W per GPU H100 + <strong>3,6 M litres d'aigua/any</strong>.</td>
+              <td>720 MWh (20% extra sobre clúster) × 283 kg/MWh , dissipació de TDP&gt;700 W per GPU H100 + <strong>3,6 M litres d'aigua/any</strong>.</td>
               <td><span class="risk-pill risk-med">203.760 kg</span></td>
             </tr>
             <tr style="background:var(--bg)">
@@ -1382,7 +1382,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
         </table>
       </div>
 
-      <p class="body-text" style="margin-top:1.75rem">Sumant la petjada del primer any d'operació (desplegament inicial + un any d'ús), l'agregat puja a <code style="font-family:var(--mono);background:var(--bg-2);padding:1px 6px;border-radius:3px;font-size:.92em">2.314.784 kg CO₂eq</code> — aproximadament les emissions anuals de <strong>500 famílies catalanes mitjanes</strong>. La justificació democràtica del Conseller-IA exigeix que aquesta externalitat es contrasti anualment contra el guany d'eficiència administrativa empíricament mesurable. Si l'estalvi de temps administratiu i la qualitat decisional acumulada no superen l'externalitat climàtica, el sistema s'ha de <em>redimensionar o desplegar parcialment</em>.</p>
+      <p class="body-text" style="margin-top:1.75rem">Sumant la petjada del primer any d'operació (desplegament inicial + un any d'ús), l'agregat puja a <code style="font-family:var(--mono);background:var(--bg-2);padding:1px 6px;border-radius:3px;font-size:.92em">2.314.784 kg CO₂eq</code> , aproximadament les emissions anuals de <strong>500 famílies catalanes mitjanes</strong>. La justificació democràtica del Conseller-IA exigeix que aquesta externalitat es contrasti anualment contra el guany d'eficiència administrativa empíricament mesurable. Si l'estalvi de temps administratiu i la qualitat decisional acumulada no superen l'externalitat climàtica, el sistema s'ha de <em>redimensionar o desplegar parcialment</em>.</p>
     </section>
 
     <!-- ══════ MANIFESTO ══════ -->
@@ -1391,7 +1391,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
       <div class="manifesto">
         <span class="manifesto-label">Manifest · Catalan Data Sovereignty</span>
         <h3>La residència de dades com a <em>prerequisit ètic</em></h3>
-        <p>Tota dada personal o sensible processada pel Conseller-IA ha de residir <strong>exclusivament en infraestructura sobirana</strong>. El desplegament primari és el Centre de Processament de Dades (CPD) de la Generalitat a Sant Cugat del Vallès —certificat Tier III— amb node de recuperació de desastres a Lleida. Cap inferència de model pot encaminar-se a través de proveïdors cloud públics (AWS, Azure, GCP) per a dades classificades per sobre del Nivell 2 de l'Esquema Nacional de Seguretat (ENS).</p>
+        <p>Tota dada personal o sensible processada pel Conseller-IA ha de residir <strong>exclusivament en infraestructura sobirana</strong>. El desplegament primari és el Centre de Processament de Dades (CPD) de la Generalitat a Sant Cugat del Vallès ,certificat Tier III, amb node de recuperació de desastres a Lleida. Cap inferència de model pot encaminar-se a través de proveïdors cloud públics (AWS, Azure, GCP) per a dades classificades per sobre del Nivell 2 de l'Esquema Nacional de Seguretat (ENS).</p>
 
         <div class="manifesto-twin">
           <div class="mtw">
@@ -1437,7 +1437,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
       <p class="section-sub">Tres casos d'estudi que articulen la tensió entre legalitat tècnica i justícia social. Cadascun inclou la <em>ratio decidendi</em> i les implicacions enginyerístiques. <a class="article-download" href="https://raw.githubusercontent.com/FernanESP0/Images-TAED/main/tae%20articulo.pdf" target="_blank" rel="noopener noreferrer" download="The_AI_Minister_TAED1_2026.pdf">Descarrega l'article complet <span class="ad-size">(PDF · 611 KB)</span></a></p>
 
       <!-- ═══════════════════════════════════════════════════════════════ -->
-      <!-- ═══ CAS 1 — Auditoria de vulnerabilitat en 3 nivells operatius ═ -->
+      <!-- ═══ CAS 1 , Auditoria de vulnerabilitat en 3 nivells operatius ═ -->
       <!-- ═══════════════════════════════════════════════════════════════ -->
       <div class="case-study" id="case1">
         <div class="case-header" onclick="toggleCase('case1')">
@@ -1447,12 +1447,12 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
               <span class="case-tag tag-vulnerabilitat">Vulnerabilitat escalada</span>
               <span class="case-tag tag-algorisme">3 nivells operatius</span>
             </div>
-            <div class="case-title">Cas 1 — Auditoria de vulnerabilitat en tres nivells</div>
+            <div class="case-title">Cas 1 , Auditoria de vulnerabilitat en tres nivells</div>
           </div>
           <span class="case-chevron">▾</span>
         </div>
         <div class="case-body">
-          <p class="case-context">El primer cas d'estudi és, en realitat, un <em>stress test</em> progressiu sobre el mateix <em>pipeline</em> tècnic: un Random Forest entrenat amb 300 TB d'inspeccions històriques, una capa d'atribució SHAP per a l'explicabilitat, i una capa de regles dures (<em>hard rules</em>) a la decisió final. Tres escenaris escalats —individual, comunitari, intergeneracional— posen a prova el mateix sistema en condicions creixents de complexitat moral. La pregunta arquitectural és única: <em>en quina capa (entrenament, model, regla de decisió o revisió humana) cal codificar les restriccions de vulnerabilitat perquè l'algorisme no produeixi decisions formalment legals però substantivament injustes?</em></p>
+          <p class="case-context">El primer cas d'estudi és, en realitat, un <em>stress test</em> progressiu sobre el mateix <em>pipeline</em> tècnic: un Random Forest entrenat amb 300 TB d'inspeccions històriques, una capa d'atribució SHAP per a l'explicabilitat, i una capa de regles dures (<em>hard rules</em>) a la decisió final. Tres escenaris escalats ,individual, comunitari, intergeneracional, posen a prova el mateix sistema en condicions creixents de complexitat moral. La pregunta arquitectural és única: <em>en quina capa (entrenament, model, regla de decisió o revisió humana) cal codificar les restriccions de vulnerabilitat perquè l'algorisme no produeixi decisions formalment legals però substantivament injustes?</em></p>
 
           <p class="case-question"><strong>Objectiu d'aquesta divisió en tres nivells:</strong> separar les tres dimensions de la fal·làcia <em>ad legalem</em> que el Conseller-IA podria materialitzar. Al <em>nivell inicial</em> auditem el conflicte entre la norma universal i el cas particular d'un individu vulnerable. Al <em>nivell intermedi</em> escalem l'impacte a una comunitat sencera (xarxa de suport veïnal amb menors). Al <em>nivell final</em> alliberem l'horitzó temporal i confrontem el present vulnerable amb el futur sostenible. Cada subcàs aporta una restricció de disseny nova al sistema, i totes convergeixen en el mateix principi: la <em>reserva humana</em> és un requisit d'enginyeria, no una preferència política.</p>
 
@@ -1461,7 +1461,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
             <span class="subcase-index-label">Índex · 3 subcasos operatius</span>
             <p class="subcase-index-hint">Despleguen el subcàs corresponent fent clic al títol. Cada subcàs és independent però comparteix el <em>pipeline</em> tècnic descrit a la introducció.</p>
 
-            <!-- ─── SUBCAS 1a (INICIAL) — Local inhabitable ─── -->
+            <!-- ─── SUBCAS 1a (INICIAL) , Local inhabitable ─── -->
             <div class="case-study subcase" id="case1a">
               <div class="case-header" onclick="toggleCase('case1a')">
                 <div>
@@ -1478,7 +1478,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
           <p class="case-context">Un Random Forest amb 500 estimadors, entrenat sobre 300 TB d'inspeccions històriques, retorna <code style="font-family:var(--mono);background:var(--bg-2);padding:1px 6px;border-radius:3px;font-size:.92em">P(infracció=True) = 0.97</code> per a una unitat residencial detectada via <span class="tt"><span class="tt-trigger">data linkage</span><span class="tt-box"><span class="tt-title">Data linkage · record-level join</span><em>Inner join</em> sobre claus quasi-identificadores (adreça normalitzada, NIF anonimitzat, codi cadastral) entre Padró Municipal, consums d'aigua/llum i cadastre. Tècnicament és un <em>fuzzy matching</em> amb similitud de Jaro-Winkler &gt; 0.92. Èticament, transforma la infraestructura pública en un panòpticon asimètric: la precarietat deixa traces, la riquesa no.</span></span> (Padró ⨝ AGBAR ⨝ Endesa). La unitat: un antic local comercial habitat per una família amb dos menors. La feature dominant a l'anàlisi SHAP: cabal de ventilació mesurat a <code style="font-family:var(--mono);background:var(--bg-2);padding:1px 6px;border-radius:3px;font-size:.92em">0.31 m³/h·m²</code>, sota el llindar de <span class="tt"><span class="tt-trigger">Decret 141/2012</span><span class="tt-box"><span class="tt-title">DOGC · Decret 141/2012</span>Marc tècnic d'habitabilitat: superfície útil mínima, cabal de ventilació, il·luminació natural, instal·lacions sanitàries. Llindar reglamentari de ventilació: <em>0.55 m³/h·m²</em>. Per al classificador és un <em>hard threshold</em>; per a una família amb menors, és el límit entre tenir sostre o no tenir-lo.</span></span>. Output del pipeline: ordre administrativa automàtica de cessament d'ús residencial. <em>Sense intervenció humana en cap moment del cicle de vida de la decisió.</em></p>
           <p class="case-question"><strong>Pregunta central:</strong> ¿Pot una administració basada en dades garantir la dignitat humana si redueix la «seguretat» a paràmetres bio-físics, ignorant la seguretat socio-existencial? La tensió és entre la <span class="tt"><span class="tt-trigger">Justícia Formal</span><span class="tt-box"><span class="tt-title">Iustitia formalis</span>Aplicació imparcial i universal de la norma, sense considerar les particularitats del cas. És el principi nuclear de l'Estat de dret: la llei és igual per a tothom. La IA encarna aquest ideal de forma absoluta.</span></span> (aplicació imparcial de la norma) i la <span class="tt"><span class="tt-trigger">Justícia Material</span><span class="tt-box"><span class="tt-title">Iustitia materialis</span>Equitat substantiva que s'ajusta a la fragilitat del cas concret. Aristòtil l'anomena <em>epieikeia</em>: la correcció de la llei allà on és massa universal per al cas particular. Exigeix <strong>phronesis</strong> humana.</span></span> (equitat que s'ajusta a la fragilitat del cas concret).</p>
 
-          <span class="philos-section-label">Eixos conceptuals — Marc teòric del cas</span>
+          <span class="philos-section-label">Eixos conceptuals , Marc teòric del cas</span>
 
           <!-- ARISTÒTIL / PHRONESIS -->
           <div class="philo-deep">
@@ -1490,7 +1490,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
                 <span class="philo-deep-school">Filosofia clàssica · Ètica de les virtuts</span>
               </div>
             </div>
-            <div class="philo-deep-quote">«La saviesa pràctica no és coneixement dels universals, sinó la capacitat de discernir el que és bo en cada situació particular.» — Ètica a Nicòmac, VI.5</div>
+            <div class="philo-deep-quote">«La saviesa pràctica no és coneixement dels universals, sinó la capacitat de discernir el que és bo en cada situació particular.» , Ètica a Nicòmac, VI.5</div>
             <div class="philo-deep-body">
               <span class="philo-deep-concept">Concepte central · Phronesis vs. Sophia</span>
               <p class="philo-deep-text">Aristòtil distingeix dos tipus de coneixement que la IA confon radicalment. La <strong>Sophia</strong> és el coneixement teòric-universal: les lleis, els decrets, les normes. La <strong>Phronesis</strong> (saviesa pràctica) és la capacitat de saber <em>quina regla aplicar en quines circumstàncies concretes</em>, reconeixent les particularitats irrepetibles de cada situació. Un expert tècnic aplica una normativa; un ésser humà phronimic sap quan la norma, si s'aplica literalment, produeix injustícia.</p>
@@ -1522,10 +1522,10 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
                 <span class="philo-deep-school">Filosofia política contemporània · Privacitat i poder digital</span>
               </div>
             </div>
-            <div class="philo-deep-quote">«La privacitat no és un luxe personal sinó una qüestió de poder. Qui té les teves dades, té poder sobre tu.» — Privacy is Power, 2020</div>
+            <div class="philo-deep-quote">«La privacitat no és un luxe personal sinó una qüestió de poder. Qui té les teves dades, té poder sobre tu.» , Privacy is Power, 2020</div>
             <div class="philo-deep-body">
               <span class="philo-deep-concept">Concepte central · Privacitat com a poder polític</span>
-              <p class="philo-deep-text">Véliz argumenta que la privacitat no és un interès individual, sinó el fonament de la igualtat política. Quan les institucions recullen i creuen dades sobre els ciutadans —especialment sobre els més vulnerables— transformen la informació en domini. El seu argument va més allà del liberalisme clàssic: no es tracta només del dret a tenir secrets, sinó que <strong>la concentració de dades sobre els pobres és una forma de violència estructural</strong>.</p>
+              <p class="philo-deep-text">Véliz argumenta que la privacitat no és un interès individual, sinó el fonament de la igualtat política. Quan les institucions recullen i creuen dades sobre els ciutadans ,especialment sobre els més vulnerables, transformen la informació en domini. El seu argument va més allà del liberalisme clàssic: no es tracta només del dret a tenir secrets, sinó que <strong>la concentració de dades sobre els pobres és una forma de violència estructural</strong>.</p>
               <p class="philo-deep-text">Véliz identifica el que anomena <strong>«l'eficiència fosca»</strong>: quan un sistema és tan eficient detectant irregularitats que es torna cec davant les necessitats que les provoquen. Els algorismes de control urbà monitoritzen amb major intensitat els barris populars, on la precarietat és visible als comptadors d'aigua i llum. La misèria no es pot amagar de les dades; la riquesa, sí.</p>
               <div class="philo-deep-grid">
                 <div class="philo-deep-block">
@@ -1557,7 +1557,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
                 <span class="philo-deep-school">Ètica de les cures · Ètica pública aplicada</span>
               </div>
             </div>
-            <div class="philo-deep-quote">«Cuidar és la pràctica de mantenir el món de manera que puguem viure-hi tant bé com sigui possible.» — Tronto, Moral Boundaries, 1993</div>
+            <div class="philo-deep-quote">«Cuidar és la pràctica de mantenir el món de manera que puguem viure-hi tant bé com sigui possible.» , Tronto, Moral Boundaries, 1993</div>
             <div class="philo-deep-body">
               <span class="philo-deep-concept">Concepte central · Reserva humana i interdependència</span>
               <p class="philo-deep-text">Joan Tronto, en la seva obra fonamental <em>Moral Boundaries</em> (1993), sosté que l'atenció i la cura no són activitats privades o secundàries, sinó la <strong>pràctica política fonamental</strong> d'una societat justa. La «bona societat» no és la que maximitza la llibertat individual, sinó la que reconeix i gestiona la nostra interdependència radical: tots som vulnerables, tots necessitem cura en algun moment.</p>
@@ -1622,7 +1622,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
           </div>
           <div class="argument-row">
             <div class="arg-col pro">
-              <span class="arg-header">A favor — Legalitat, Universalitat, Seguretat</span>
+              <span class="arg-header">A favor , Legalitat, Universalitat, Seguretat</span>
               <ul class="arg-list">
                 <li>L'Imperatiu Categòric de la Seguretat: la norma d'habitabilitat no pot ser opcional sense degradar el dret a l'habitatge digne per a tothom.</li>
                 <li>Un local sense ventilació té un índex de mortalitat per incendi un 400% superior a un habitatge legal.</li>
@@ -1631,7 +1631,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
               </ul>
             </div>
             <div class="arg-col con">
-              <span class="arg-header">En contra — Vulnerabilitat, Proporcionalitat, Autonomia</span>
+              <span class="arg-header">En contra , Vulnerabilitat, Proporcionalitat, Autonomia</span>
               <ul class="arg-list">
                 <li>Fal·làcia del «mal menor»: la IA no computa el risc de viure al carrer. El fred o la violència poden ser perills més immediats que la manca de ventilació.</li>
                 <li>Ètica de les Cures (Tronto, 1993): la decisió algorítmica ignora la xarxa de suport, l'escolarització dels nens, l'ecosistema de supervivència.</li>
@@ -1640,11 +1640,11 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
               </ul>
             </div>
           </div>
-          <div class="case-consensus"><strong>Proposta de consens:</strong> La IA ha de detectar la infracció (protegir la vida), però la llei ha de prohibir l'execució automàtica si no hi ha una alternativa residencial garantida. El sistema ha de funcionar com un <em>algorisme de triatge</em>, no d'execució: generar una alerta per a Serveis Socials, no una ordre de desnonament immediat. (Principis de Revocabilitat i Interès del Menor — Román<a href="#r11" class="cite-link">[11]</a>.)</div>
+          <div class="case-consensus"><strong>Proposta de consens:</strong> La IA ha de detectar la infracció (protegir la vida), però la llei ha de prohibir l'execució automàtica si no hi ha una alternativa residencial garantida. El sistema ha de funcionar com un <em>algorisme de triatge</em>, no d'execució: generar una alerta per a Serveis Socials, no una ordre de desnonament immediat. (Principis de Revocabilitat i Interès del Menor , Román<a href="#r11" class="cite-link">[11]</a>.)</div>
         </div>
       </div>
 
-            <!-- ─── SUBCAS 1b (INTERMEDI) — Centre social irregular ─── -->
+            <!-- ─── SUBCAS 1b (INTERMEDI) , Centre social irregular ─── -->
             <div class="case-study subcase" id="case1b">
               <div class="case-header" onclick="toggleCase('case1b')">
                 <div>
@@ -1661,7 +1661,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
           <p class="case-context">L'algoritme detecta un magatzem comercial ocupat per una associació de veïns que dóna berenar i fa repàs escolar a desenes de nens de famílies vulnerables. El local no té llicència ni sortides d'emergència adequades. La IA emet automàticament una <strong>ordre de precinte i clausura immediata</strong> per risc greu d'incendi.</p>
           <p class="case-question"><strong>Diferència clau respecte al Cas 1:</strong> l'impacte ja no és sobre una sola família, sinó sobre tota una xarxa de suport veïnal. La clausura destrueix un <em>ecosistema comunitari</em> que supleix una carència de l'Estat. La <span class="tt"><span class="tt-trigger">Crítica a la Raó Instrumental</span><span class="tt-box"><span class="tt-title">Escola de Frankfurt</span>Horkheimer, Adorno, Habermas i Marcuse adverteixen contra la <strong>raó instrumental</strong>: la racionalitat que calcula mitjans per a fins preestablerts amb màxima eficiència, sense qüestionar els fins mateixos. La <strong>tecnocràcia</strong> consisteix a reduir problemes polítics (valors en conflicte) a problemes tècnics (optimització de dades).</span></span> (Frankfurt): convertir un problema polític de valors en un problema tècnic de dades és tecnocràcia.</p>
 
-          <span class="philos-section-label">Eixos conceptuals — Marc teòric del cas</span>
+          <span class="philos-section-label">Eixos conceptuals , Marc teòric del cas</span>
 
           <!-- HABERMAS / ESCOLA DE FRANKFURT -->
           <div class="philo-deep">
@@ -1676,7 +1676,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
                 <span class="philo-deep-school">Escola de Frankfurt · Teoria Crítica · Raó comunicativa</span>
               </div>
             </div>
-            <div class="philo-deep-quote">«La raó instrumental instrumentalitza els éssers humans com si fossin objectes. La raó comunicativa els reconeix com a subjectes capaços de diàleg.» — Habermas, Teoria de l'Acció Comunicativa, 1981</div>
+            <div class="philo-deep-quote">«La raó instrumental instrumentalitza els éssers humans com si fossin objectes. La raó comunicativa els reconeix com a subjectes capaços de diàleg.» , Habermas, Teoria de l'Acció Comunicativa, 1981</div>
             <div class="philo-deep-body">
               <span class="philo-deep-concept">Concepte central · Raó instrumental vs. Raó comunicativa</span>
               <p class="philo-deep-text">L'Escola de Frankfurt, des de Horkheimer i Adorno fins a Habermas i Marcuse, diagnostica una patologia de la modernitat: la <strong>colonització de la vida quotidiana per la racionalitat instrumental</strong>. La raó instrumental calcula mitjans per a fins preestablerts amb màxima eficiència; la raó comunicativa, en canvi, busca el consens a través del diàleg entre iguals reconeixent la validesa dels arguments, no sols el seu valor d'ús.</p>
@@ -1709,7 +1709,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
                 <span class="philo-deep-school">Liberalisme polític · Teoria de la justícia</span>
               </div>
             </div>
-            <div class="philo-deep-quote">«Les desigualtats socials i econòmiques han d'organitzar-se de tal manera que siguin per al major benefici dels membres menys avantatjats de la societat.» — A Theory of Justice, 1971, §46</div>
+            <div class="philo-deep-quote">«Les desigualtats socials i econòmiques han d'organitzar-se de tal manera que siguin per al major benefici dels membres menys avantatjats de la societat.» , A Theory of Justice, 1971, §46</div>
             <div class="philo-deep-body">
               <span class="philo-deep-concept">Concepte central · Vel d'ignorància i principi de diferència</span>
               <p class="philo-deep-text">Rawls proposa un experiment mental: imagina que has de dissenyar les regles de la societat sense saber quin lloc hi ocuparàs. No saps si seràs ric o pobre, sa o malalt, de la majoria o d'una minoria. Des d'aquest <span class="tt"><span class="tt-trigger"><strong>«vel d'ignorància»</strong></span><span class="tt-box"><span class="tt-title">Veil of Ignorance</span>Dispositiu metodològic per derivar principis de justícia imparcials. En eliminar la informació sobre la pròpia posició social, capacitats i preferències, les persones racionals triarien regles que protegeixin els qui estan en pitjor situació, perquè podrien ser ells.</span></span>, quines normes triaríes? Rawls argumenta que triaríem dues: el principi de les llibertats bàsiques iguals per a tots, i el <span class="tt"><span class="tt-trigger"><strong>principi de diferència</strong></span><span class="tt-box"><span class="tt-title">Difference Principle</span>Les desigualtats socials i econòmiques només són justificables si beneficien els membres menys avantatjats de la societat. Aplicat a la IA pública: cap decisió algorítmica és justa si empitjora la situació dels més vulnerables sense oferir-los una alternativa.</span></span>: les desigualtats sols són justificables si beneficien els membres menys avantatjats.</p>
@@ -1733,7 +1733,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
 
           <!-- DIAGRAM -->
           <div class="case-diagram">
-            <span class="case-diagram-title">Diagrama · Tensions de valors en el Cas 2 — Capital Social vs. Seguretat Formal</span>
+            <span class="case-diagram-title">Diagrama · Tensions de valors en el Cas 2 , Capital Social vs. Seguretat Formal</span>
             <svg viewBox="0 0 660 270" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:660px">
               <line x1="330" y1="30" x2="330" y2="240" stroke="#e0ddd6" stroke-width="1.5" stroke-dasharray="4,4"/>
               <text x="330" y="22" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#9b9ba8" letter-spacing="0.14em">PUNT DE TENSIÓ ÈTICA</text>
@@ -1766,13 +1766,13 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
               <rect x="304" y="130" width="52" height="32" rx="3" fill="#0e0e12"/>
               <text x="330" y="143" text-anchor="middle" font-family="'DM Mono',monospace" font-size="7" fill="rgba(246,244,239,0.6)" letter-spacing="0.1em">DECISIÓ</text>
               <text x="330" y="156" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="9" fill="#f6f4ef">Algorisme</text>
-              <text x="330" y="240" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#9b9ba8" letter-spacing="0.12em">punt de bifurcació ètica — deliberació humana necessària</text>
+              <text x="330" y="240" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#9b9ba8" letter-spacing="0.12em">punt de bifurcació ètica , deliberació humana necessària</text>
             </svg>
           </div>
 
           <div class="argument-row">
             <div class="arg-col pro">
-              <span class="arg-header">A favor — Seguretat, Universalitat</span>
+              <span class="arg-header">A favor , Seguretat, Universalitat</span>
               <ul class="arg-list">
                 <li>La norma de seguretat contra incendis protegeix els menors que utilitzen el local: un incendi podria ser letal.</li>
                 <li>Universalitat (Kant): si es permet una excepció per «capital social», es debilita la norma per a tothom.</li>
@@ -1781,7 +1781,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
               </ul>
             </div>
             <div class="arg-col con">
-              <span class="arg-header">En contra — Interès del menor, Proporcionalitat</span>
+              <span class="arg-header">En contra , Interès del menor, Proporcionalitat</span>
               <ul class="arg-list">
                 <li>L'«Interès superior dels menors» (Román) implica valorar la totalitat de l'impacte, no sols el risc físic del local.</li>
                 <li>La IA no té mecanisme per computar el cost social de tancar l'únic espai de suport d'un barri vulnerable.</li>
@@ -1794,7 +1794,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
               </div>
             </div>
 
-            <!-- ─── SUBCAS 1c (FINAL) — El corredor verd ─── -->
+            <!-- ─── SUBCAS 1c (FINAL) , El corredor verd ─── -->
             <div class="case-study subcase" id="case1c">
               <div class="case-header" onclick="toggleCase('case1c')">
                 <div>
@@ -1812,7 +1812,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
 
                 <p class="case-question"><strong>Pregunta central:</strong> ¿Pot un algorisme prioritzar la viabilitat d'una població futura estadística contra els drets d'una població present identificada i ja vulnerable? La tensió és entre l'<span class="tt"><span class="tt-trigger">Imperatiu de Responsabilitat</span><span class="tt-box"><span class="tt-title">Hans Jonas (1979)</span>«Actua de tal manera que els efectes de la teva acció siguin compatibles amb la permanència d'una vida humana autèntica.» Imperatiu cosmològic centrat en la viabilitat de les generacions futures. La IA tendeix a Jonas perquè la seva funció de pèrdua pot penalitzar el dany irreversible com a infinit.</span></span> (Jonas) i el <span class="tt"><span class="tt-trigger">Principi de Diferència</span><span class="tt-box"><span class="tt-title">John Rawls · A Theory of Justice (1971)</span>Les desigualtats només són justificables si beneficien els membres menys avantatjats de la societat. Aplicada a un algorisme, exigeix que cada output empitjori almenys un grup vulnerable identificat només si simultàniament millora un grup encara més vulnerable. El càlcul utilitari pur falla aquest test.</span></span> (Rawls), amb la <em>raó instrumental</em> de la Frankfurt com a denominador comú crític.</p>
 
-                <span class="philos-section-label">Eixos conceptuals — Marc teòric del cas</span>
+                <span class="philos-section-label">Eixos conceptuals , Marc teòric del cas</span>
 
                 <!-- HANS JONAS -->
                 <div class="philo-deep">
@@ -1824,7 +1824,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
                       <span class="philo-deep-school">Filosofia de la tecnologia · Ètica de la responsabilitat</span>
                     </div>
                   </div>
-                  <div class="philo-deep-quote">«Actua de tal manera que els efectes de la teva acció siguin compatibles amb la permanència d'una vida humana autèntica sobre la Terra.» — Das Prinzip Verantwortung, 1979</div>
+                  <div class="philo-deep-quote">«Actua de tal manera que els efectes de la teva acció siguin compatibles amb la permanència d'una vida humana autèntica sobre la Terra.» , Das Prinzip Verantwortung, 1979</div>
                   <div class="philo-deep-body">
                     <span class="philo-deep-concept">Concepte central · Imperatiu de la Responsabilitat</span>
                     <p class="philo-deep-text">Jonas reformula l'imperatiu kantià en clau cosmològica. La revolució industrial ha donat a l'ésser humà el poder de comprometre les condicions de vida de les generacions futures; la consciència moral, per tant, ha d'expandir-se en l'eix temporal. La regla de decisió ja no és «què passa si tothom actua com jo» (Kant), sinó «què passa amb la humanitat d'aquí a 100 anys si tothom actua com jo» (Jonas). La <strong>permanència</strong> es converteix en restricció ètica absoluta.</p>
@@ -1841,7 +1841,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
                     </div>
                     <div class="philo-deep-connection">
                       <span class="philo-deep-connection-label">Connexió amb el cas</span>
-                      <strong>La IA tendeix estructuralment a Jonas:</strong> el corredor verd evita un dany catastròfic distribuït en el temps. Però aquesta tendència no és imparcial — és una elecció de pesos. <em>Triar β ≫ α és un acte polític codificat com a hiperparàmetre.</em>
+                      <strong>La IA tendeix estructuralment a Jonas:</strong> el corredor verd evita un dany catastròfic distribuït en el temps. Però aquesta tendència no és imparcial , és una elecció de pesos. <em>Triar β ≫ α és un acte polític codificat com a hiperparàmetre.</em>
                     </div>
                   </div>
                 </div>
@@ -1856,7 +1856,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
                       <span class="philo-deep-school">Liberalisme polític · Justícia com a equitat</span>
                     </div>
                   </div>
-                  <div class="philo-deep-quote">«Les desigualtats socials i econòmiques només són justes si beneficien els membres menys avantatjats de la societat.» — A Theory of Justice, 1971, §13</div>
+                  <div class="philo-deep-quote">«Les desigualtats socials i econòmiques només són justes si beneficien els membres menys avantatjats de la societat.» , A Theory of Justice, 1971, §13</div>
                   <div class="philo-deep-body">
                     <span class="philo-deep-concept">Concepte central · Vel de la Ignorància i Principi de Diferència</span>
                     <p class="philo-deep-text">El <strong>vel de la ignorància</strong> és un experiment mental: imagina que ets a punt de néixer i ignores el teu lloc futur a la societat (classe, gènere, salut, generació). Quines regles triaries per ordenar la societat? Rawls argumenta que escolliries dos principis lexicogràficament ordenats: (1) llibertats iguals per a tothom, i (2) el <em>Principi de Diferència</em>, segons el qual només són tolerables les desigualtats que millorin la situació dels menys avantatjats.</p>
@@ -1891,7 +1891,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
                       <span class="philo-deep-school">Escola de Frankfurt · Teoria crítica · Raó comunicativa</span>
                     </div>
                   </div>
-                  <div class="philo-deep-quote">«La raó instrumental converteix tota qüestió de fins en una qüestió de mitjans, i tota qüestió de valor en una qüestió de càlcul.» — Adorno &amp; Horkheimer, paràfrasi de la Dialèctica de la Il·lustració</div>
+                  <div class="philo-deep-quote">«La raó instrumental converteix tota qüestió de fins en una qüestió de mitjans, i tota qüestió de valor en una qüestió de càlcul.» , Adorno &amp; Horkheimer, paràfrasi de la Dialèctica de la Il·lustració</div>
                   <div class="philo-deep-body">
                     <span class="philo-deep-concept">Concepte central · Crítica a la <strong>raó instrumental</strong> i defensa de la <strong>raó comunicativa</strong></span>
                     <p class="philo-deep-text">L'Escola de Frankfurt distingeix dos modes de racionalitat: la <em>instrumental</em> calcula els mitjans més eficients per assolir un fi donat (és la racionalitat de qualsevol pipeline de ML), i la <em>comunicativa</em> delibera sobre quins fins són legítims (és la racionalitat de l'àgora democràtica). El perill modern, sostenen Habermas i Marcuse, és la <strong>tecnocràcia</strong>: convertir progressivament les decisions polítiques en problemes tècnics, fins que la pròpia possibilitat de deliberació queda colonitzada per la lògica de l'optimització.</p>
@@ -1932,7 +1932,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
 
                 <div class="argument-row">
                   <div class="arg-col pro">
-                    <span class="arg-header">A favor — Permanència, Responsabilitat, Adaptació</span>
+                    <span class="arg-header">A favor , Permanència, Responsabilitat, Adaptació</span>
                     <ul class="arg-list">
                       <li>Si no actuem ara, l'illa de calor projectada fa el barri inhabitable per a tothom el 2050: l'enderroc és una forma d'auto-conservació col·lectiva.</li>
                       <li>El cost de no actuar es propaga a totes les generacions futures; el d'actuar es concentra en una població compensable.</li>
@@ -1941,12 +1941,12 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
                     </ul>
                   </div>
                   <div class="arg-col con">
-                    <span class="arg-header">En contra — Diferència, Identitat, Deliberació</span>
+                    <span class="arg-header">En contra , Diferència, Identitat, Deliberació</span>
                     <ul class="arg-list">
                       <li>Principi de Diferència (Rawls): la decisió empitjora la situació dels més vulnerables presents sense beneficiar-los directament.</li>
                       <li>Crítica a la raó instrumental (Frankfurt): la qüestió no és tècnica; convertir-la en optimització despolititza una decisió fonamentalment democràtica.</li>
                       <li>Els beneficiaris futurs són una abstracció estadística sense veu; els afectats presents són persones concretes amb dret a ser escoltades (audiència, due process).</li>
-                      <li>El barri té valor immaterial (xarxa veïnal, memòria, identitat) que cap funció de pèrdua pot quantificar — la cura (Tronto) torna a actuar.</li>
+                      <li>El barri té valor immaterial (xarxa veïnal, memòria, identitat) que cap funció de pèrdua pot quantificar , la cura (Tronto) torna a actuar.</li>
                     </ul>
                   </div>
                 </div>
@@ -1959,7 +1959,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
       </div><!-- /case-study #case1 (outer) -->
 
       <!-- ═══════════════════════════════════════════════════════════════ -->
-      <!-- ═══ CAS 2 — Optimització multi-objectiu en habitatge d'emergència ═ -->
+      <!-- ═══ CAS 2 , Optimització multi-objectiu en habitatge d'emergència ═ -->
       <!-- ═══════════════════════════════════════════════════════════════ -->
       <div class="case-study" id="case2">
         <div class="case-header" onclick="toggleCase('case2')">
@@ -1969,13 +1969,13 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
               <span class="case-tag tag-comunitat">Habitatge d'emergència</span>
               <span class="case-tag tag-algorisme">Frontera de Pareto</span>
             </div>
-            <div class="case-title">Cas 2 — Optimització multi-objectiu: Habitatge d'urgència vs. Sostenibilitat</div>
+            <div class="case-title">Cas 2 , Optimització multi-objectiu: Habitatge d'urgència vs. Sostenibilitat</div>
           </div>
           <span class="case-chevron">▾</span>
         </div>
         <div class="case-body">
           <p class="case-context">El subsistema d'<em>Assignació d'Habitatge i Resposta d'Emergència</em> ha de resoldre, davant d'un increment del 32 % en sol·licituds del Registre de Sol·licitants d'Habitatge, un problema d'optimització multi-objectiu canònic: maximitzar la velocitat de construcció i el nombre d'unitats lliurades, minimitzant simultàniament l'impacte climàtic agregat. Les variables de decisió són: <em>N</em> (nombre d'unitats), <em>τ</em> (mesos fins a entrega), <em>tipologia</em> (formigó armat ↔ panell prefabricat ↔ <em>passive house</em> de fusta laminada), i <em>impacte CO₂-eq</em> per unitat. NSGA-II retorna una frontera de Pareto amb dos extrems clarament definits:</p>
-          <p class="case-question"><strong>Pregunta central:</strong> Com pot un algorisme honest triar entre dos òptims no commensurables sense imposar implícitament una jerarquia política de valors? La frontera de Pareto és matemàticament correcta — i èticament insuficient.</p>
+          <p class="case-question"><strong>Pregunta central:</strong> Com pot un algorisme honest triar entre dos òptims no commensurables sense imposar implícitament una jerarquia política de valors? La frontera de Pareto és matemàticament correcta , i èticament insuficient.</p>
 
           <div class="case-diagram">
             <span class="case-diagram-title">Frontera de Pareto · Habitatge d'emergència vs. Cost climàtic</span>
@@ -2011,7 +2011,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
                 <span class="philo-deep-school">Optimització multi-objectiu · Frontera no dominada</span>
               </div>
             </div>
-            <div class="philo-deep-quote">«Quan no existeix una solució dominant, qualsevol elecció a la frontera de Pareto és matemàticament òptima i èticament arbitrària.» — Resum operatiu del problema multi-objectiu</div>
+            <div class="philo-deep-quote">«Quan no existeix una solució dominant, qualsevol elecció a la frontera de Pareto és matemàticament òptima i èticament arbitrària.» , Resum operatiu del problema multi-objectiu</div>
             <div class="philo-deep-body">
               <span class="philo-deep-concept">Concepte central · No-dominància i el límit del càlcul</span>
               <p class="philo-deep-text">Una solució <em>domina</em> una altra si és millor o igual en tots els objectius i estrictament millor en almenys un. La <strong>frontera de Pareto</strong> és el conjunt de solucions no dominades. Al cas que ens ocupa, A i B són ambdues a la frontera: cap supera l'altra en tots els objectius. La «millor» solució no existeix; només la <em>preferida</em> sota un vector de pesos.</p>
@@ -2028,14 +2028,14 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
               </div>
               <div class="philo-deep-connection">
                 <span class="philo-deep-connection-label">Connexió amb el cas</span>
-                <strong>Triar entre A i B exigeix un pes (α, β) que NO és tècnic:</strong> és la traducció numèrica d'una pregunta política — «quin valor moral relatiu té el dret immediat al sostre dels ciutadans presents davant el deute climàtic que imposem a les generacions futures?». El Conseller-IA ha de presentar la frontera completa, no preferir-ne un punt. La phronesis política torna a actuar com a complement de la sophia algorítmica.
+                <strong>Triar entre A i B exigeix un pes (α, β) que NO és tècnic:</strong> és la traducció numèrica d'una pregunta política , «quin valor moral relatiu té el dret immediat al sostre dels ciutadans presents davant el deute climàtic que imposem a les generacions futures?». El Conseller-IA ha de presentar la frontera completa, no preferir-ne un punt. La phronesis política torna a actuar com a complement de la sophia algorítmica.
               </div>
             </div>
           </div>
 
           <div class="argument-row">
             <div class="arg-col pro">
-              <span class="arg-header">A favor de «Housing First» (A) — Urgència, Vulnerabilitat present</span>
+              <span class="arg-header">A favor de «Housing First» (A) , Urgència, Vulnerabilitat present</span>
               <ul class="arg-list">
                 <li>3 000 famílies addicionals lliurades en 12 mesos: reducció estimada d'un 24 % en peticions a serveis d'emergència residencial.</li>
                 <li>Principi rawlsià: els menys avantatjats actuals (sense-sostre) reben benefici directe i mesurable.</li>
@@ -2044,7 +2044,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
               </ul>
             </div>
             <div class="arg-col con">
-              <span class="arg-header">A favor de «Sustainability First» (B) — Permanència, Responsabilitat futura</span>
+              <span class="arg-header">A favor de «Sustainability First» (B) , Permanència, Responsabilitat futura</span>
               <ul class="arg-list">
                 <li>Imperatiu de Jonas: l'increment d'emissions és incompatible amb la permanència d'una vida humana autèntica al territori.</li>
                 <li>Llei 16/2017 del Canvi Climàtic: el sector de la construcció ja contribueix el 30 % de les emissions; un +8 % addicional és políticament regressiu.</li>
@@ -2058,7 +2058,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
         </div>
       </div>
 
-      <!-- CAS 3 — v4 content i format: Paisatge singular vs. biomassa -->
+      <!-- CAS 3 , v4 content i format: Paisatge singular vs. biomassa -->
       <div class="case-study" id="case3">
         <div class="case-header" onclick="toggleCase('case3')">
           <div>
@@ -2067,7 +2067,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
               <span class="case-tag tag-comunitat">PTOP paisatge</span>
               <span class="case-tag tag-algorisme">Exception handling</span>
             </div>
-            <div class="case-title">Cas 3 — Planta de biomassa en paisatge singular: Estètica vs. Utilitat</div>
+            <div class="case-title">Cas 3 , Planta de biomassa en paisatge singular: Estètica vs. Utilitat</div>
           </div>
           <span class="case-chevron">▾</span>
         </div>
@@ -2075,7 +2075,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
           <p class="case-context">El classificador de llicències aplica una regla d'<span class="tt"><span class="tt-trigger">exclusió espacial determinista</span><span class="tt-box"><span class="tt-title">Hard rule espacial</span>Restricció binària codificada com a feature obligatòria del model. A diferència d'una restricció estadística (probabilística), aquí la decisió no admet ponderació: si la coordenada cau dins el polígon protegit, el resultat és sempre «denegat». No hi ha gradient, no hi ha excepció via aprenentatge.</span></span> derivada del catàleg <span class="tt"><span class="tt-trigger">PTOP</span><span class="tt-box"><span class="tt-title">Pla Territorial · Ordenació Paisatgística</span>Instruments urbanístics que classifiquen el sòl segons valors estètics, culturals i ambientals. El «paisatge singular» codifica patrimoni cultural com a restricció normativa. La categoria és binària: <em>protegit</em> o <em>no protegit</em>.</span></span>: la zona on es proposa la planta de biomassa està marcada com a «paisatge singular», codificant valors estètics i culturals com una restricció binària. El sistema denega automàticament la sol·licitud, malgrat que la planta reduiria el risc d'incendis forestals, generaria ocupació local i contribuiria als objectius de transició energètica de la Llei 16/2017.</p>
           <p class="case-question"><strong>Pregunta central:</strong> ¿Pot un algorisme codificar el valor «paisatge» com una restricció binària quan la decisió real exigeix ponderar la salut ecològica a llarg termini, el valor intrínsec de la naturalesa i el benestar agregat de la comunitat? La tensió és entre l'<span class="tt"><span class="tt-trigger">Ètica Ambiental</span><span class="tt-box"><span class="tt-title">Land Ethic + Deep Ecology</span>Aldo Leopold (1949) i Arne Næss (1973) defensen que la naturalesa té <strong>valor intrínsec</strong>, no només instrumental. La comunitat moral inclou ecosistemes, no només persones. El paisatge no és substituïble per cap altre bé.</span></span> (valor intrínsec del paisatge) i l'<span class="tt"><span class="tt-trigger">Ètica Utilitarista</span><span class="tt-box"><span class="tt-title">Bentham &amp; Mill</span>Maximització del benestar agregat: la decisió correcta és aquella que produeix la major felicitat per al major nombre. Càlcul conseqüencialista basat en intensitat, durada i extensió dels efectes. La rigidesa que ignora aquest balanç pot ser, en aquest marc, immoral.</span></span> (maximització del benestar agregat).</p>
 
-          <span class="philos-section-label">Eixos conceptuals — Marc teòric del cas</span>
+          <span class="philos-section-label">Eixos conceptuals , Marc teòric del cas</span>
 
           <!-- ALDO LEOPOLD & ARNE NAESS -->
           <div class="philo-deep">
@@ -2090,7 +2090,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
                 <span class="philo-deep-school">Ètica ambiental · Land Ethic · Deep Ecology</span>
               </div>
             </div>
-            <div class="philo-deep-quote">«Una cosa és correcta quan tendeix a preservar la integritat, estabilitat i bellesa de la comunitat biòtica. És incorrecta quan tendeix al contrari.» — Aldo Leopold, A Sand County Almanac, 1949</div>
+            <div class="philo-deep-quote">«Una cosa és correcta quan tendeix a preservar la integritat, estabilitat i bellesa de la comunitat biòtica. És incorrecta quan tendeix al contrari.» , Aldo Leopold, A Sand County Almanac, 1949</div>
             <div class="philo-deep-body">
               <span class="philo-deep-concept">Concepte central · Valor intrínsec de la naturalesa</span>
               <p class="philo-deep-text">Aldo Leopold, a <em>A Sand County Almanac</em> (1949), introdueix la <strong>«Land Ethic»</strong>: la moralitat ha d'estendre's per incloure la comunitat biòtica, no només els éssers humans. La terra, els ecosistemes, els paisatges no són recursos a explotar, sinó membres d'una comunitat moral ampliada. Segons aquest enfocament, preservar un paisatge només per la seva bellesa estètica seria insuficient si aquesta preservació no garanteix la salut ecològica a llarg termini.</p>
@@ -2102,7 +2102,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
                 </div>
                 <div class="philo-deep-block">
                   <span class="philo-deep-block-label">Deep Ecology (Næss)</span>
-                  <p class="philo-deep-block-text">El paisatge té valor més enllà del que els humans hi vegin. L'algorisme que protegeix automàticament les zones PTOP encarna —sense saber-ho— una forma elemental d'aquest principi: la inviolabilitat de certs valors no negociables.</p>
+                  <p class="philo-deep-block-text">El paisatge té valor més enllà del que els humans hi vegin. L'algorisme que protegeix automàticament les zones PTOP encarna ,sense saber-ho, una forma elemental d'aquest principi: la inviolabilitat de certs valors no negociables.</p>
                 </div>
               </div>
               <div class="philo-deep-connection">
@@ -2125,7 +2125,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
                 <span class="philo-deep-school">Filosofia utilitarista · Ètica conseqüencialista</span>
               </div>
             </div>
-            <div class="philo-deep-quote">«La major felicitat del major nombre és el fonament de la moralitat i la legislació.» — Bentham, Introduction to the Principles of Morals and Legislation, 1789</div>
+            <div class="philo-deep-quote">«La major felicitat del major nombre és el fonament de la moralitat i la legislació.» , Bentham, Introduction to the Principles of Morals and Legislation, 1789</div>
             <div class="philo-deep-body">
               <span class="philo-deep-concept">Concepte central · Maximització del benestar agregat</span>
               <p class="philo-deep-text">Des del punt de vista utilitarista, la decisió moral correcta és aquella que maximitza el benestar global. Bentham proposa un càlcul felicífic: sumar plaers i restar dolors, ponderats per intensitat, durada i extensió. Mill refina el principi distingint entre plaers superiors i inferiors, però manté la lògica conseqüencialista: <strong>el que importa són les conseqüències, no les regles abstractes</strong>.</p>
@@ -2149,7 +2149,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
 
           <!-- DIAGRAM: Pareto-front -->
           <div class="case-diagram">
-            <span class="case-diagram-title">Diagrama · Tensions de valors en el Cas 3 — Estètica vs. Utilitat agregada</span>
+            <span class="case-diagram-title">Diagrama · Tensions de valors en el Cas 3 , Estètica vs. Utilitat agregada</span>
             <svg viewBox="0 0 660 270" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:660px">
               <line x1="330" y1="30" x2="330" y2="240" stroke="#e0ddd6" stroke-width="1.5" stroke-dasharray="4,4"/>
               <text x="330" y="22" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#9b9ba8" letter-spacing="0.14em">PUNT DE TENSIÓ ÈTICA</text>
@@ -2186,7 +2186,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
 
           <div class="argument-row">
             <div class="arg-col pro">
-              <span class="arg-header">A favor — Utilitat agregada, Transició energètica</span>
+              <span class="arg-header">A favor , Utilitat agregada, Transició energètica</span>
               <ul class="arg-list">
                 <li>Càlcul utilitarista (Bentham/Mill): el balanç de benestar és positiu si l'ocupació, la prevenció d'incendis i la reducció d'emissions superen el cost estètic.</li>
                 <li>La Llei 16/2017 del canvi climàtic obliga a la transició energètica i a la neutralitat d'emissions, que requereix infraestructures noves.</li>
@@ -2195,7 +2195,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
               </ul>
             </div>
             <div class="arg-col con">
-              <span class="arg-header">En contra — Valor intrínsec, Sobirania humana</span>
+              <span class="arg-header">En contra , Valor intrínsec, Sobirania humana</span>
               <ul class="arg-list">
                 <li>Land Ethic (Leopold): la comunitat biòtica té estatut moral; un paisatge singular no és simplement un «recurs» permutable.</li>
                 <li>Deep Ecology (Næss): la naturalesa té valor intrínsec, independent de la utilitat humana mesurable.</li>
@@ -2228,7 +2228,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
             <div class="eco-card-kicker">Llibre · 2021 · Yale University Press</div>
             <div class="eco-card-title">Atlas of AI</div>
             <div class="eco-card-author">Kate Crawford</div>
-            <p class="eco-card-prop">Cartografia exhaustiva de la <strong>materialitat física</strong> de la IA (mineria, energia, treball, dades) — pilar imprescindible per entendre el Pilar 4 d'aquest blog.</p>
+            <p class="eco-card-prop">Cartografia exhaustiva de la <strong>materialitat física</strong> de la IA (mineria, energia, treball, dades) , pilar imprescindible per entendre el Pilar 4 d'aquest blog.</p>
             <span class="eco-card-link">Llegir més →</span>
           </a>
 
@@ -2244,7 +2244,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
             <div class="eco-card-kicker">Llibre · 2016 · Crown</div>
             <div class="eco-card-title">Weapons of Math Destruction</div>
             <div class="eco-card-author">Cathy O'Neil</div>
-            <p class="eco-card-prop">Tres característiques canòniques dels models que perjudiquen els vulnerables — <strong>opacitat, escala i dany</strong> — descriuen exactament el risc del Decret 141/2012 automatitzat.</p>
+            <p class="eco-card-prop">Tres característiques canòniques dels models que perjudiquen els vulnerables , <strong>opacitat, escala i dany</strong> , descriuen exactament el risc del Decret 141/2012 automatitzat.</p>
             <span class="eco-card-link">Llegir més →</span>
           </a>
 
@@ -2280,7 +2280,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
         <div class="eco-group-header">
           <span class="eco-group-badge eco-badge-news">📰 Pulsació de la indústria</span>
           <h3 class="eco-group-title">Mitjans i centres de recerca de referència</h3>
-          <p class="eco-group-sub">Cinc fonts continuades — actualització setmanal o mensual — per seguir els desenvolupaments que afecten directament un projecte com Conseller-IA.</p>
+          <p class="eco-group-sub">Cinc fonts continuades , actualització setmanal o mensual , per seguir els desenvolupaments que afecten directament un projecte com Conseller-IA.</p>
         </div>
         <div class="eco-grid">
 
@@ -2296,7 +2296,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
             <div class="eco-card-kicker">Periodisme d'investigació · Nova York</div>
             <div class="eco-card-title">The Markup</div>
             <div class="eco-card-author">Investigative non-profit newsroom</div>
-            <p class="eco-card-prop">Auditories empíriques d'algorismes (cribratge d'inquilins, COMPAS, scoring crediticis) — el seu mètode és exactament el que el Cas 1 reclamaria per als <strong>classificadors d'habitabilitat</strong>.</p>
+            <p class="eco-card-prop">Auditories empíriques d'algorismes (cribratge d'inquilins, COMPAS, scoring crediticis) , el seu mètode és exactament el que el Cas 1 reclamaria per als <strong>classificadors d'habitabilitat</strong>.</p>
             <span class="eco-card-link">Visitar →</span>
           </a>
 
@@ -2320,7 +2320,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
             <div class="eco-card-kicker">Newsletter polític · Brussel·les</div>
             <div class="eco-card-title">POLITICO Europe · Technology</div>
             <div class="eco-card-author">EU policy &amp; AI Act tracking</div>
-            <p class="eco-card-prop">Cobertura quotidiana del desplegament de l'<strong>EU AI Act</strong> i de les obligacions per a sistemes d'alt risc en administracions europees — context regulatori imprescindible per a un Conseller-IA real.</p>
+            <p class="eco-card-prop">Cobertura quotidiana del desplegament de l'<strong>EU AI Act</strong> i de les obligacions per a sistemes d'alt risc en administracions europees , context regulatori imprescindible per a un Conseller-IA real.</p>
             <span class="eco-card-link">Visitar →</span>
           </a>
 
@@ -2348,7 +2348,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
             <div class="eco-card-kicker">Substack · Princeton · 2-3 publicacions/mes</div>
             <div class="eco-card-title">AI Snake Oil</div>
             <div class="eco-card-author">Arvind Narayanan &amp; Sayash Kapoor</div>
-            <p class="eco-card-prop">Desmunta científicament <strong>l'exageració dels classificadors predictius</strong> en habitatge, justícia, serveis socials — el contrarelat empíric necessari per moderar l'entusiasme tecnocràtic.</p>
+            <p class="eco-card-prop">Desmunta científicament <strong>l'exageració dels classificadors predictius</strong> en habitatge, justícia, serveis socials , el contrarelat empíric necessari per moderar l'entusiasme tecnocràtic.</p>
             <span class="eco-card-link">Explorar →</span>
           </a>
 
@@ -2356,7 +2356,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
             <div class="eco-card-kicker">Observatori internacional · OCDE</div>
             <div class="eco-card-title">OECD AI Policy Observatory</div>
             <div class="eco-card-author">Comparative Policy &amp; Metrics</div>
-            <p class="eco-card-prop">Base de dades pública de <strong>polítiques d'IA per país</strong>, marc comparatiu d'incidents (AIM) i indicadors d'adopció — eina pràctica per situar Catalunya en el context global.</p>
+            <p class="eco-card-prop">Base de dades pública de <strong>polítiques d'IA per país</strong>, marc comparatiu d'incidents (AIM) i indicadors d'adopció , eina pràctica per situar Catalunya en el context global.</p>
             <span class="eco-card-link">Explorar →</span>
           </a>
 
@@ -2364,7 +2364,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
             <div class="eco-card-kicker">Consorci multi-stakeholder · San Francisco</div>
             <div class="eco-card-title">Partnership on AI</div>
             <div class="eco-card-author">Responsible AI Industry Consortium</div>
-            <p class="eco-card-prop">Marcs operatius (Model Cards, AI &amp; Media Integrity, Synthetic Media) endossats per <strong>Google, Microsoft, Anthropic, OpenAI i societat civil</strong> — útil per derivar especificacions tècniques de governança.</p>
+            <p class="eco-card-prop">Marcs operatius (Model Cards, AI &amp; Media Integrity, Synthetic Media) endossats per <strong>Google, Microsoft, Anthropic, OpenAI i societat civil</strong> , útil per derivar especificacions tècniques de governança.</p>
             <span class="eco-card-link">Explorar →</span>
           </a>
 
@@ -2372,7 +2372,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
             <div class="eco-card-kicker">Plataforma open-source · model registry</div>
             <div class="eco-card-title">Hugging Face · Model Cards</div>
             <div class="eco-card-author">Open ML community</div>
-            <p class="eco-card-prop">L'estàndard <em>de facto</em> per a la <strong>documentació pública de models</strong> (intended use, training data, fairness metrics, environmental footprint) — implementació operacional dels requisits que el blog defensa.</p>
+            <p class="eco-card-prop">L'estàndard <em>de facto</em> per a la <strong>documentació pública de models</strong> (intended use, training data, fairness metrics, environmental footprint) , implementació operacional dels requisits que el blog defensa.</p>
             <span class="eco-card-link">Explorar →</span>
           </a>
 
@@ -2429,12 +2429,12 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
         </div></li>
         <li class="ref-item" id="r8"><span class="ref-num">8</span><div>
           <div class="ref-authors">Comissió Europea</div>
-          <div class="ref-title">Reglament (UE) 2024/1689 — EU AI Act. Classificació de sistemes d'alt risc i obligacions d'auditoria.</div>
+          <div class="ref-title">Reglament (UE) 2024/1689 , EU AI Act. Classificació de sistemes d'alt risc i obligacions d'auditoria.</div>
           <div class="ref-source"><span class="ref-src-txt">Brussel·les, 2024</span><span class="ref-badge rb-llei">Llei</span></div>
         </div></li>
         <li class="ref-item" id="r9"><span class="ref-num">9</span><div>
           <div class="ref-authors">Parlament Europeu</div>
-          <div class="ref-title">Reglament (UE) 2016/679 — GDPR. Art. 44–49 sobre transferències internacionals de dades personals.</div>
+          <div class="ref-title">Reglament (UE) 2016/679 , GDPR. Art. 44–49 sobre transferències internacionals de dades personals.</div>
           <div class="ref-source"><span class="ref-src-txt">Brussel·les, 2016</span><span class="ref-badge rb-llei">Llei</span></div>
         </div></li>
         <li class="ref-item" id="r10"><span class="ref-num">10</span><div>
@@ -2588,7 +2588,7 @@ section[id]{scroll-margin-top:calc(var(--topnav-h) + 1.5rem)}
         <span>NVIDIA HGX<br>A100/H100</span>
       </div>
       <div class="marg-caption">Hardware · CPD Sant Cugat</div>
-      <p>Cada node H100 dissipa fins a <strong>700W TDP</strong>. Vuit nodes per al subsistema territorial. Cicle de vida: 3–5 anys. Cobalt, liti i terres rares —dependències geopolítiques amb la RD Congo, Xile i Xina.</p>
+      <p>Cada node H100 dissipa fins a <strong>700W TDP</strong>. Vuit nodes per al subsistema territorial. Cicle de vida: 3–5 anys. Cobalt, liti i terres rares ,dependències geopolítiques amb la RD Congo, Xile i Xina.</p>
       <span class="marg-cite">NVIDIA H100 datasheet</span>
     </div>
 
@@ -2784,22 +2784,22 @@ const navContainer = document.getElementById('topNav');
    New algorithm (geometry-driven, immune to DOM/array order mismatches)
    ───────────────────────────────────────────────────────────────────────
    1. Build a single trigger line ~100 px below the sticky top-nav.
-   2. PRIMARY PASS — find every section currently CONTAINING the trigger
+   2. PRIMARY PASS , find every section currently CONTAINING the trigger
       (sectionTop ≤ triggerY < sectionBottom). Among those, pick the one
       whose top is CLOSEST to the trigger from above (smallest distance).
       → handles nested accordions naturally (#case1 wins over #cases when
         both contain trigger; the innermost / most recently entered).
-   3. FALLBACK PASS — if no section contains the trigger (user is in a
+   3. FALLBACK PASS , if no section contains the trigger (user is in a
       vertical gutter between sections), pick the section whose top is the
       most recent (largest top ≤ triggerY). Keeps the previous group
       highlighted during scroll transitions.
-   4. FINAL FALLBACK — if absolutely nothing matches, default to summary.
+   4. FINAL FALLBACK , if absolutely nothing matches, default to summary.
 
    Hidden anchors guard
    ────────────────────
    .case-study.subcase elements (#case1a, #case1b, #case1c) live inside
    a collapsed accordion (display:none) most of the time. offsetParent
-   returns null in that state, so we skip them — otherwise their
+   returns null in that state, so we skip them , otherwise their
    getBoundingClientRect() returns zero values and they steal the active
    state from real sections.
 */
@@ -3200,7 +3200,7 @@ function toggleCase(id) {
         if(rect.bottom < 0 && scrollDir === 'down'){
           el.classList.add('is-leaving');
         } else if(rect.top > window.innerHeight){
-          // Not yet entered (below viewport) — keep hidden state
+          // Not yet entered (below viewport) , keep hidden state
           el.classList.remove('is-visible','is-leaving');
         }
       }
